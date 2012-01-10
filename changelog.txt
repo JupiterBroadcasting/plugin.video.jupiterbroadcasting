@@ -1,0 +1,15 @@
+[B]Version 1.2.0[/B]
+- Switched to HD video
+- Updated some of the show thumbnail images
+- Fix for RSS feeds without enclosures
+
+[B]Version 1.1.0[/B]
+- New show: The MMOrgue
+- New show: TechSNAP
+- New show: SciByte
+
+[B]Version 1.0.1[/B]
+- Updated icon from freezy. Thanks freezy!
+
+[B]Version 1.0.0[/B]
+- Initial release

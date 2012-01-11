@@ -5,7 +5,7 @@
   <string id="30002">STOked</string>
   <string id="30003">LOTSO</string>
   <string id="30004">Jupiter@Nite</string>
-  <string id="30005">Bryan Lunduke's Jupiter Files</string>
+  <string id="30005">Jupiter Files</string>
   <string id="30006">All Shows</string>
   <string id="30007">The MMOrgue</string>
   <string id="30008">TechSNAP</string>
@@ -13,4 +13,5 @@
   <string id="30010">Live Show</string>
   <string id="30011">FauxShow</string>
   <string id="30012">Watch Jupiter Broadcasting live!</string>
+  <string id="30013">All the latest videos from Jupiter Broadcasting.</string>
 </strings>

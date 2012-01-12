@@ -1,18 +1,18 @@
 Jupiter Broadcasting XBMC Addon
 ===============================
-Watch shows from the [Jupiter Broadcasting](http://jupiterbroadcasting.com) network.
+Watch shows from the [Jupiter Broadcasting](http://jupiterbroadcasting.com) network in [XBMC](http://xbmc.org/).
 
 Shows
 -----
 * [Live Show](http://jblive.tv)
 * Linux Action Show
-* TechSNAP
-* Jupiter Files
-* SciByte
-* LOTSO
 * STOked
-* The MMOrgue
-* Jupiter@Nite
-* Beer Is Tasty
-* FauxShow
+* TechSNAP
+* SciByte
 * In Depth Look
+* FauxShow
+* Jupiter@Nite
+* The MMOrgue
+* LOTSO
+* Beer Is Tasty
+* Jupiter Files

@@ -14,7 +14,7 @@ def CATEGORIES():
         'feed': 'http://feeds2.feedburner.com/AllJupiterVideos?format=xml',
         'feed-low': 'http://feeds2.feedburner.com/AllJupiterVideos?format=xml',
         'image': 'http://images2.wikia.nocookie.net/__cb20110118004527/jupiterbroadcasting/images/2/24/JupiterBadgeGeneric.jpg',
-        'plot': __language__(30013),
+        'plot': __language__(30206),
         'genre': 'Technology'
     }
 
@@ -23,16 +23,7 @@ def CATEGORIES():
         'feed': 'http://feeds.feedburner.com/computeractionshowvideo?format=xml',
         'feed-low': 'http://feeds.feedburner.com/linuxactionshowipodvid?format=xml',
         'image': 'http://www.jupiterbroadcasting.com/images/LAS-VIDEO.jpg',
-        'plot': 'The Linux Action Show covers the latest news in free and open source software, especially Linux.',
-        'genre': 'Technology'
-    }
-
-    # Beer is Tasty
-    shows[__language__(30001)] = {
-        'feed': 'http://feeds2.feedburner.com/jupiterbeeristasty-hd?format=xml',
-        'feed-low': 'http://feeds2.feedburner.com/jupiterbeeristasty-hd?format=xml',
-        'image': 'http://www.jupiterbroadcasting.com/images/beeristasty/BeerisTasty-iTunesBadgeHD.png',
-        'plot': 'Finding interesting combinations of food and beer.',
+        'plot': __language__(30200),
         'genre': 'Technology'
     }
 
@@ -41,42 +32,7 @@ def CATEGORIES():
         'feed': 'http://feeds.feedburner.com/stokedhd?format=xml',
         'feed-low': 'http://feeds.feedburner.com/stokedipod?format=xml',
         'image': 'http://www.jupiterbroadcasting.com/images/STOked-BadgeHD.png',
-        'plot': 'All the news about Star Trek Online you would ever need.',
-        'genre': 'Technology'
-    }
-
-    # LOTSO
-    shows[__language__(30003)] = {
-        'feed': 'http://feeds.feedburner.com/lotsovideo?format=xml',
-        'feed-low': 'http://feeds.feedburner.com/lotsovideo?format=xml',
-        'image': 'http://www.jupiterbroadcasting.com/images/LOTSOiTunesVideo144.jpg',
-        'plot': 'Video games, reviews and coverage.',
-        'genre': 'Technology'
-    }
-
-    # Jupiter@Nite
-    shows[__language__(30004)] = {
-        'feed': 'http://feeds.feedburner.com/jupiternitehd?format=xml',
-        'feed-low': 'http://feeds.feedburner.com/jupiternitehd?format=xml',
-        'image': 'http://www.jupiterbroadcasting.com/images/JANBADGE-LVID.jpg',
-        'plot': 'Jupiter Broadcasting hooliganisms covered in front of a live audience on the intertubes.',
-        'genre': 'Technology'
-    }
-
-    # Jupiter Files
-    shows[__language__(30005)] = {
-        'feed': 'http://feeds.feedburner.com/ldf-video?format=xml',
-        'feed-low': 'http://feeds.feedburner.com/ldf-video?format=xml',
-        'image': 'http://www.jupiterbroadcasting.com/images/LDF-FullStill144x139.jpg',
-        'plot': 'Bryan takes a peek into alien life.',
-        'genre': 'Technology'
-    }
-    # MMOrgue
-    shows[__language__(30007)] = {
-        'feed': 'http://feeds.feedburner.com/MMOrgueHD?format=xml',
-        'feed-low': 'http://feeds.feedburner.com/MMOrgueHD?format=xml',
-        'image': 'http://www.jupiterbroadcasting.com/images/MMOrgueBadgeHD144.jpg',
-        'plot': 'The MMOrgue is a show presented by Jeremy about Massively Multiplayer Online (MMO) games.',
+        'plot': __language__(30202),
         'genre': 'Technology'
     }
 
@@ -85,7 +41,7 @@ def CATEGORIES():
         'feed': 'http://feeds.feedburner.com/techsnaphd?format=xml',
         'feed-low': 'http://feeds.feedburner.com/techsnapmobile?format=xml',
         'image': 'http://images3.wikia.nocookie.net/jupiterbroadcasting/images/d/d6/Techsnapcenter.jpg',
-        'plot': 'TechSNAP is a show about technology news hosted by Chris Fisher and Allan Jude which records live on Thursdays and is released on the following Monday.',
+        'plot': __language__(30208),
         'genre': 'Technology'
     }
 
@@ -94,17 +50,8 @@ def CATEGORIES():
         'feed': 'http://feeds.feedburner.com/scibytehd?format=xml',
         'feed-low': 'http://feeds.feedburner.com/scibytemobile?format=xml',
         'image': 'http://www.jupiterbroadcasting.com/images/SciByteBadgeHD.jpg',
-        'plot': 'SciByte is a show about science topics presented by Heather and Jeremy.',
+        'plot': __language__(30209),
         'genre': 'Science'
-    }
-
-    # FauxShow
-    shows[__language__(30011)] = {
-        'feed': 'http://blip.tv/fauxshow/rss/itunes',
-        'feed-low': 'http://blip.tv/fauxshow/rss/itunes',
-        'image': 'http://a.images.blip.tv/FauxShow-300x300_show_image205.png',
-        'plot': 'The FauxShow is not a real show, but a social experience. Unlike most of the shows on the network, the FauxShow has no defined subject and the topic varies week to week.',
-        'genre': 'Humour'
     }
 
     # In Depth Look
@@ -112,16 +59,70 @@ def CATEGORIES():
         'feed': 'http://www.jupiterbroadcasting.com/feeds/indepthlookihd.xml',
         'feed-low': 'http://www.jupiterbroadcasting.com/feeds/indepthlookmob.xml',
         'image': 'http://images4.wikia.nocookie.net/jupiterbroadcasting/images/3/33/Indepthlook.jpg',
-        'plot': 'Total focus on great topics, one episode at a time. Each week Chris present another topic, from extreme hardware builds to beginner video guides.',
+        'plot': __language__(30214),
+        'genre': 'Technology'
+    }
+
+    # FauxShow
+    shows[__language__(30011)] = {
+        'feed': 'http://blip.tv/fauxshow/rss/itunes',
+        'feed-low': 'http://blip.tv/fauxshow/rss/itunes',
+        'image': 'http://a.images.blip.tv/FauxShow-300x300_show_image205.png',
+        'plot': __language__(30211),
+        'genre': 'Humour'
+    }
+
+    # Jupiter@Nite
+    shows[__language__(30004)] = {
+        'feed': 'http://feeds.feedburner.com/jupiternitehd?format=xml',
+        'feed-low': 'http://feeds.feedburner.com/jupiternitehd?format=xml',
+        'image': 'http://www.jupiterbroadcasting.com/images/JANBADGE-LVID.jpg',
+        'plot': __language__(30204),
+        'genre': 'Technology'
+    }
+
+    # MMOrgue
+    shows[__language__(30007)] = {
+        'feed': 'http://feeds.feedburner.com/MMOrgueHD?format=xml',
+        'feed-low': 'http://feeds.feedburner.com/MMOrgueHD?format=xml',
+        'image': 'http://www.jupiterbroadcasting.com/images/MMOrgueBadgeHD144.jpg',
+        'plot': __language__(30207),
+        'genre': 'Technology'
+    }
+
+    # LOTSO
+    shows[__language__(30003)] = {
+        'feed': 'http://feeds.feedburner.com/lotsovideo?format=xml',
+        'feed-low': 'http://feeds.feedburner.com/lotsovideo?format=xml',
+        'image': 'http://www.jupiterbroadcasting.com/images/LOTSOiTunesVideo144.jpg',
+        'plot': __language__(30203),
+        'genre': 'Technology'
+    }
+
+    # Beer is Tasty
+    shows[__language__(30001)] = {
+        'feed': 'http://feeds2.feedburner.com/jupiterbeeristasty-hd?format=xml',
+        'feed-low': 'http://feeds2.feedburner.com/jupiterbeeristasty-hd?format=xml',
+        'image': 'http://www.jupiterbroadcasting.com/images/beeristasty/BeerisTasty-iTunesBadgeHD.png',
+        'plot': __language__(30201),
+        'genre': 'Technology'
+    }
+
+    # Jupiter Files
+    shows[__language__(30005)] = {
+        'feed': 'http://feeds.feedburner.com/ldf-video?format=xml',
+        'feed-low': 'http://feeds.feedburner.com/ldf-video?format=xml',
+        'image': 'http://www.jupiterbroadcasting.com/images/LDF-FullStill144x139.jpg',
+        'plot': __language__(30205),
         'genre': 'Technology'
     }
 
     # Jupiter Broadcasting Live via the RTMP stream
     addLink(__language__(30010), 'rtsp://videocdn-us.geocdn.scaleengine.net/jblive/jblive.stream', '', 'http://images2.wikia.nocookie.net/__cb20110118004527/jupiterbroadcasting/images/2/24/JupiterBadgeGeneric.jpg', {
-      'title': __language__(30010),
-      'plot': __language__(30012),
-      'genre': 'Technology',
-      'count': 1
+        'title': __language__(30010),
+        'plot': __language__(30210),
+        'genre': 'Technology',
+        'count': 1
     })
 
     # Loop through each of the shows and add them as directories.

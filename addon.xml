@@ -12,8 +12,8 @@
         <provides>video</provides>
   </extension>
   <extension point="xbmc.addon.metadata">
-    <summary>Jupiter Broadcasting video plugin</summary>
-    <description>Shows from the Jupiter Broadcasting Network including the Linux Action Show, STOked, TechSNAP and more.</description>
+    <summary>Jupiter Broadcasting video addon</summary>
+    <description>Watch shows from the Jupiter Broadcasting Network including the Linux Action Show, STOked, TechSNAP and more.</description>
     <platform>all</platform>
   </extension>
 </addon>

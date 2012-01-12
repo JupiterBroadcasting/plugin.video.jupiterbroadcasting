@@ -3,6 +3,7 @@
 - Thumbnail support once ChrisLAS adds them
 - Various small fixes
 - New show: FauxShow
+- Added background fan art
 
 [B]Version 1.3.0[/B]
 - Moved to GitHub for version control

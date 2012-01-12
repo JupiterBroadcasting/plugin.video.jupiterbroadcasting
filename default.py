@@ -10,66 +10,77 @@ def CATEGORIES():
     shows = {}
     shows[__language__(30006)] = {
         'feed': 'http://feeds2.feedburner.com/AllJupiterVideos?format=xml',
+        'feed-low': 'http://feeds2.feedburner.com/AllJupiterVideos?format=xml',
         'image': 'http://images2.wikia.nocookie.net/__cb20110118004527/jupiterbroadcasting/images/2/24/JupiterBadgeGeneric.jpg',
         'plot': __language__(30013),
         'genre': 'Technology'
     }
     shows[__language__(30000)] = {
         'feed': 'http://feeds.feedburner.com/computeractionshowvideo?format=xml',
+        'feed-low': 'http://feeds.feedburner.com/linuxactionshowipodvid?format=xml',
         'image': 'http://www.jupiterbroadcasting.com/images/LAS-VIDEO.jpg',
         'plot': 'The Linux Action Show covers the latest news in free and open source software, especially Linux.',
         'genre': 'Technology'
     }
     shows[__language__(30001)] = {
         'feed': 'http://feeds2.feedburner.com/jupiterbeeristasty-hd?format=xml',
+        'feed-low': 'http://feeds2.feedburner.com/jupiterbeeristasty-hd?format=xml',
         'image': 'http://www.jupiterbroadcasting.com/images/beeristasty/BeerisTasty-iTunesBadgeHD.png',
         'plot': 'Finding interesting combinations of food and beer.',
         'genre': 'Technology'
     }
     shows[__language__(30002)] = {
         'feed': 'http://feeds.feedburner.com/stokedhd?format=xml',
+        'feed-low': 'http://feeds.feedburner.com/stokedipod?format=xml',
         'image': 'http://www.jupiterbroadcasting.com/images/STOked-BadgeHD.png',
         'plot': 'All the news about Star Trek Online you would ever need.',
         'genre': 'Technology'
     }
     shows[__language__(30003)] = {
         'feed': 'http://feeds.feedburner.com/lotsovideo?format=xml',
+        'feed-low': 'http://feeds.feedburner.com/lotsovideo?format=xml',
         'image': 'http://www.jupiterbroadcasting.com/images/LOTSOiTunesVideo144.jpg',
         'plot': 'Video games, reviews and coverage.',
         'genre': 'Technology'
     }
     shows[__language__(30004)] = {
         'feed': 'http://feeds.feedburner.com/jupiternitehd?format=xml',
+        'feed-low': 'http://feeds.feedburner.com/jupiternitehd?format=xml',
         'image': 'http://www.jupiterbroadcasting.com/images/JANBADGE-LVID.jpg',
         'plot': 'Jupiter Broadcasting hooliganisms covered in front of a live audience on the intertubes.',
         'genre': 'Technology'
     }
     shows[__language__(30005)] = {
         'feed': 'http://feeds.feedburner.com/ldf-video?format=xml',
+        'feed-low': 'http://feeds.feedburner.com/ldf-video?format=xml',
         'image': 'http://www.jupiterbroadcasting.com/images/LDF-FullStill144x139.jpg',
         'plot': 'Bryan takes a peek into alien life.',
         'genre': 'Technology'
     }
     shows[__language__(30007)] = {
         'feed': 'http://feeds.feedburner.com/MMOrgueHD?format=xml',
+        'feed-low': 'http://feeds.feedburner.com/MMOrgueHD?format=xml',
         'image': 'http://www.jupiterbroadcasting.com/images/MMOrgueBadgeHD144.jpg',
         'plot': 'The MMOrgue is a show presented by Jeremy about Massively Multiplayer Online (MMO) games.',
         'genre': 'Technology'
     }
     shows[__language__(30008)] = {
         'feed': 'http://feeds.feedburner.com/techsnaphd?format=xml',
+        'feed-low': 'http://feeds.feedburner.com/techsnapmobile?format=xml',
         'image': 'http://images3.wikia.nocookie.net/jupiterbroadcasting/images/d/d6/Techsnapcenter.jpg',
         'plot': 'TechSNAP is a show about technology news hosted by Chris Fisher and Allan Jude which records live on Thursdays and is released on the following Monday.',
         'genre': 'Technology'
     }
     shows[__language__(30009)] = {
         'feed': 'http://feeds.feedburner.com/scibytehd?format=xml',
+        'feed-low': 'http://feeds.feedburner.com/scibytemobile?format=xml',
         'image': 'http://www.jupiterbroadcasting.com/images/SciByteBadgeHD.jpg',
         'plot': 'SciByte is a show about science topics presented by Heather and Jeremy.',
         'genre': 'Science'
     }
     shows[__language__(30011)] = {
         'feed': 'http://blip.tv/fauxshow/rss/itunes',
+        'feed-low': 'http://blip.tv/fauxshow/rss/itunes',
         'image': 'http://a.images.blip.tv/FauxShow-300x300_show_image205.png',
         'plot': 'The FauxShow is not a real show, but a social experience. Unlike most of the shows on the network, the FauxShow has no defined subject and the topic varies week to week.',
         'genre': 'Humour'
@@ -85,10 +96,15 @@ def CATEGORIES():
 
     # Loop through each of the shows and add them as directories.
     x = 2
+    quality = int(__settings__.getSetting("video_quality"))
     for name, data in shows.iteritems():
         data['count'] = x
         x = x + 1
-        addDir(name, data['feed'], 1, data['image'], data)
+        # Check whether to use the high or low quality feed.
+        feed = data['feed'] # High by default.
+        if (quality == 1):
+            feed = data['feed-low']
+        addDir(name, feed, 1, data['image'], data)
 
 def INDEX(name, url):
     data = urllib2.urlopen(url)

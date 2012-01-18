@@ -19,5 +19,5 @@ Shows
 
 Instructions
 ------------
-# Download the Jupiter Broadcasting Addon from the official XBMC Addon Repository
-# Visit Video Addons, configure and load up Jupiter Broadcasting
+1. Download the addon from the official XBMC Addon Repository
+2. Visit Video Addons, configure and load up Jupiter Broadcasting

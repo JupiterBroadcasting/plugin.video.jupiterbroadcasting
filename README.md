@@ -16,3 +16,8 @@ Shows
 * LOTSO
 * Beer Is Tasty
 * Jupiter Files
+
+Instructions
+------------
+# Download the Jupiter Broadcasting Addon from the official XBMC Addon Repository
+# Visit Video Addons, configure and load up Jupiter Broadcasting

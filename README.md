@@ -27,5 +27,5 @@ Instructions
 
 About
 -----
-Author: [Rob Loach](http://robloach.net)
-Source: [GitHub](http://github.com/RobLoach/plugin.video.jupiterbroadcasting/)
+* Author: [Rob Loach](http://robloach.net)
+* Source: [GitHub](http://github.com/RobLoach/plugin.video.jupiterbroadcasting/)

@@ -1,5 +1,6 @@
 [B]Version 2.8.x[/B]
-- FauxShow: #4 Use JupiterBroadcasting.com feeds
+- #4 FauxShow: Use JupiterBroadcasting.com feeds
+- #2 Pagination
 
 [B]Version 2.8.0: July 7th, 2012[/B]
 - New show: Coder Radio

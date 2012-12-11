@@ -1,4 +1,4 @@
-import urllib,urllib2,re,xbmcplugin,xbmcgui,xbmcaddon
+import urllib, urllib2, re, xbmcplugin, xbmcgui, xbmcaddon, os
 from time import strftime
 from BeautifulSoup import BeautifulSoup, BeautifulStoneSoup
 
@@ -13,16 +13,17 @@ def CATEGORIES():
     shows[__language__(30006)] = {
         'feed': 'http://feeds2.feedburner.com/AllJupiterVideos?format=xml',
         'feed-low': 'http://feeds2.feedburner.com/AllJupiterVideos?format=xml',
-        'image': 'http://images2.wikia.nocookie.net/__cb20110118004527/jupiterbroadcasting/images/2/24/JupiterBadgeGeneric.jpg',
+        'image': os.path.join(__settings__.getAddonInfo('path'), 'resources', 'media', 'jupiterbroadcasting.jpg'),
         'plot': __language__(30206),
-        'genre': 'Technology'
+        'genre': 'Technology',
+        'count': 0
     }
 
     # Linux Action Show
     shows[__language__(30000)] = {
         'feed': 'http://feeds.feedburner.com/computeractionshowvideo',
         'feed-low': 'http://feeds.feedburner.com/linuxactionshowipodvid?format=xml',
-        'image': 'http://www.jupiterbroadcasting.com/images/LAS-VIDEO.jpg',
+        'image': os.path.join(__settings__.getAddonInfo('path'), 'resources', 'media', 'linuxactionshow.jpg'),
         'plot': __language__(30200),
         'genre': 'Technology'
     }
@@ -31,7 +32,7 @@ def CATEGORIES():
     shows[__language__(30002)] = {
         'feed': 'http://feeds.feedburner.com/stokedhd?format=xml',
         'feed-low': 'http://feeds.feedburner.com/stokedipod?format=xml',
-        'image': 'http://www.jupiterbroadcasting.com/images/STOked-BadgeHD.png',
+        'image': os.path.join(__settings__.getAddonInfo('path'), 'resources', 'media', 'stoked.png'),
         'plot': __language__(30202),
         'genre': 'Technology'
     }
@@ -40,7 +41,7 @@ def CATEGORIES():
     shows[__language__(30008)] = {
         'feed': 'http://feeds.feedburner.com/techsnaphd?format=xml',
         'feed-low': 'http://feeds.feedburner.com/techsnapmobile?format=xml',
-        'image': 'http://images3.wikia.nocookie.net/jupiterbroadcasting/images/d/d6/Techsnapcenter.jpg',
+        'image': os.path.join(__settings__.getAddonInfo('path'), 'resources', 'media', 'techsnap.jpg'),
         'plot': __language__(30208),
         'genre': 'Technology'
     }
@@ -49,7 +50,7 @@ def CATEGORIES():
     shows[__language__(30009)] = {
         'feed': 'http://feeds.feedburner.com/scibytehd?format=xml',
         'feed-low': 'http://feeds.feedburner.com/scibytemobile?format=xml',
-        'image': 'http://www.jupiterbroadcasting.com/images/SciByteBadgeHD.jpg',
+        'image': os.path.join(__settings__.getAddonInfo('path'), 'resources', 'media', 'scibyte.jpg'),
         'plot': __language__(30209),
         'genre': 'Science'
     }
@@ -58,7 +59,7 @@ def CATEGORIES():
     shows[__language__(30014)] = {
         'feed': 'http://www.jupiterbroadcasting.com/feeds/indepthlookihd.xml',
         'feed-low': 'http://www.jupiterbroadcasting.com/feeds/indepthlookmob.xml',
-        'image': 'http://images4.wikia.nocookie.net/jupiterbroadcasting/images/3/33/Indepthlook.jpg',
+        'image': os.path.join(__settings__.getAddonInfo('path'), 'resources', 'media', 'indepthlook.jpg'),
         'plot': __language__(30214),
         'genre': 'Technology'
     }
@@ -67,7 +68,7 @@ def CATEGORIES():
     shows[__language__(30016)] = {
         'feed': 'http://www.jupiterbroadcasting.com/feeds/unfilterHD.xml',
         'feed-low': 'http://www.jupiterbroadcasting.com/feeds/unfilterMob.xml',
-        'image': 'http://www.jupiterbroadcasting.com/images/itunes-badge.jpg',
+        'image': os.path.join(__settings__.getAddonInfo('path'), 'resources', 'media', 'unfilter.jpg'),
         'plot': __language__(30216),
         'genre': 'Technology'
     }
@@ -76,7 +77,7 @@ def CATEGORIES():
     shows[__language__(30011)] = {
         'feed': 'http://www.jupiterbroadcasting.com/feeds/FauxShowHD.xml',
         'feed-low': 'http://www.jupiterbroadcasting.com/feeds/FauxShowMobile.xml',
-        'image': 'http://www.jupiterbroadcasting.com/images/FauxShowStillcrop600.jpg',
+        'image': os.path.join(__settings__.getAddonInfo('path'), 'resources', 'media', 'fauxshow.jpg'),
         'plot': __language__(30211),
         'genre': 'Comedy'
     }
@@ -85,7 +86,7 @@ def CATEGORIES():
     shows[__language__(30004)] = {
         'feed': 'http://feeds.feedburner.com/jupiternitehd?format=xml',
         'feed-low': 'http://feeds.feedburner.com/jupiternitehd?format=xml',
-        'image': 'http://www.jupiterbroadcasting.com/images/JANBADGE-LVID.jpg',
+        'image': os.path.join(__settings__.getAddonInfo('path'), 'resources', 'media', 'jupiteratnite.jpg'),
         'plot': __language__(30204),
         'genre': 'Technology'
     }
@@ -94,7 +95,7 @@ def CATEGORIES():
     shows[__language__(30007)] = {
         'feed': 'http://feeds.feedburner.com/MMOrgueHD?format=xml',
         'feed-low': 'http://feeds.feedburner.com/MMOrgueHD?format=xml',
-        'image': 'http://www.jupiterbroadcasting.com/images/MMOrgueBadgeHD144.jpg',
+        'image': os.path.join(__settings__.getAddonInfo('path'), 'resources', 'media', 'mmorgue.jpg'),
         'plot': __language__(30207),
         'genre': 'Technology'
     }
@@ -103,7 +104,7 @@ def CATEGORIES():
     shows[__language__(30003)] = {
         'feed': 'http://feeds.feedburner.com/lotsovideo?format=xml',
         'feed-low': 'http://feeds.feedburner.com/lotsovideo?format=xml',
-        'image': 'http://www.jupiterbroadcasting.com/images/LOTSOiTunesVideo144.jpg',
+        'image': os.path.join(__settings__.getAddonInfo('path'), 'resources', 'media', 'lotso.jpg'),
         'plot': __language__(30203),
         'genre': 'Technology'
     }
@@ -112,7 +113,7 @@ def CATEGORIES():
     shows[__language__(30001)] = {
         'feed': 'http://feeds2.feedburner.com/jupiterbeeristasty-hd?format=xml',
         'feed-low': 'http://feeds2.feedburner.com/jupiterbeeristasty-hd?format=xml',
-        'image': 'http://www.jupiterbroadcasting.com/images/beeristasty/BeerisTasty-iTunesBadgeHD.png',
+        'image': os.path.join(__settings__.getAddonInfo('path'), 'resources', 'media', 'beeristasty.png'),
         'plot': __language__(30201),
         'genre': 'Technology'
     }
@@ -121,7 +122,7 @@ def CATEGORIES():
     shows[__language__(30005)] = {
         'feed': 'http://feeds.feedburner.com/ldf-video?format=xml',
         'feed-low': 'http://feeds.feedburner.com/ldf-video?format=xml',
-        'image': 'http://www.jupiterbroadcasting.com/images/LDF-FullStill144x139.jpg',
+        'image': os.path.join(__settings__.getAddonInfo('path'), 'resources', 'media', 'jupiterfiles.jpg'),
         'plot': __language__(30205),
         'genre': 'Technology'
     }
@@ -130,7 +131,7 @@ def CATEGORIES():
     shows[__language__(30015)] = {
         'feed': 'http://feeds.feedburner.com/TorkedHd?format=xml',
         'feed-low': 'http://feeds.feedburner.com/TorkedMobile?format=xml',
-        'image': 'http://images3.wikia.nocookie.net/jupiterbroadcasting/images/e/ea/Torked.jpg',
+        'image': os.path.join(__settings__.getAddonInfo('path'), 'resources', 'media', 'torked.jpg'),
         'plot': __language__(30215),
         'genre': 'Technology'
     }
@@ -139,23 +140,30 @@ def CATEGORIES():
     shows[__language__(30017)] = {
         'feed': 'http://feeds.feedburner.com/coderradiovideo?format=xml',
         'feed-low': 'http://www.jupiterbroadcasting.com/feeds/coderradioogg.xml?format=xml',
-        'image': 'http://www.jupiterbroadcasting.com/images/CR-rssBadge.jpg',
+        'image': os.path.join(__settings__.getAddonInfo('path'), 'resources', 'media', 'coderradio.jpg'),
         'plot': __language__(30217),
         'genre': 'Technology'
     }
 
     # Jupiter Broadcasting Live via the RTMP stream
-    addLink(__language__(30010), 'http://videocdn-us.geocdn.scaleengine.net/jblive-iphone/live/jblive.stream/playlist.m3u8', '', 'http://images2.wikia.nocookie.net/__cb20110118004527/jupiterbroadcasting/images/2/24/JupiterBadgeGeneric.jpg', {
-        'title': __language__(30010),
-        'plot': __language__(30210),
-        'genre': 'Technology',
-        'count': 1
-    })
+    addLink(
+        name = __language__(30010),
+        url = 'http://videocdn-us.geocdn.scaleengine.net/jblive-iphone/live/jblive.stream/playlist.m3u8',
+        date = '',
+        iconimage = os.path.join(__settings__.getAddonInfo('path'), 'resources', 'media', 'jupiterbroadcasting.jpg'),
+        info = {
+            'title': __language__(30010),
+            'plot': __language__(30210),
+            'genre': 'Technology',
+            'count': 1
+        }
+    )
 
     # Loop through each of the shows and add them as directories.
     x = 2
     quality = int(__settings__.getSetting("video_quality"))
     for name, data in shows.iteritems():
+        # @TODO Get the ordering correct.
         data['count'] = x
         x = x + 1
         # Check whether to use the high or low quality feed.
@@ -190,7 +198,14 @@ def INDEX(name, url, page):
                 continue
             if (n >= start + episodesperpage):
                 # Add a go to next page link, and skip the rest of the loop.
-                addDir(__language__(30300), url, 1, '', {}, page + 1)
+                addDir(
+                    name = __language__(30300),
+                    url = url,
+                    mode= 1,
+                    iconimage = os.path.join(__settings__.getAddonInfo('path'), 'resources', 'media', 'next.png'),
+                    info = {},
+                    page = page + 1
+                )
                 break
 
             # Load up the initial episode information.

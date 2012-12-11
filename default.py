@@ -9,7 +9,7 @@ def CATEGORIES():
     # List all the shows.
     shows = {}
 
-    # All Shows 
+    # All Shows
     shows[__language__(30006)] = {
         'feed': 'http://feeds2.feedburner.com/AllJupiterVideos?format=xml',
         'feed-low': 'http://feeds2.feedburner.com/AllJupiterVideos?format=xml',
@@ -164,20 +164,39 @@ def CATEGORIES():
             feed = data['feed-low']
         addDir(name, feed, 1, data['image'], data)
 
-def INDEX(name, url):
+def INDEX(name, url, page):
     # Load the XML feed.
     data = urllib2.urlopen(url)
 
     # Parse the data with BeautifulStoneSoup, noting any self-closing tags.
     soup = BeautifulStoneSoup(data, convertEntities=BeautifulStoneSoup.XML_ENTITIES, selfClosingTags=['media:thumbnail', 'enclosure', 'media:content'])
     count = 1
-    # Wrap in a try/catch to protect from borken RSS feeds.
+
+    # Figure out where to start and where to stop the pagination.
+    # TODO: Fix the Episodes per Page setting.
+    episodesperpage = 25 # int(__settings__.getSetting("episodes_per_page"))
+    start = episodesperpage * int(page);
+    print "Episodes per Page: " + str(episodesperpage) + "\n"
+    print "Start:" + str(start);
+    n = 0;
+
+    # Wrap in a try/catch to protect from broken RSS feeds.
     try:
         for item in soup.findAll('item'):
+            # Set up the pagination properly.
+            n += 1
+            if (n < start):
+                # Skip this episode since it's before the page starts.
+                continue
+            if (n >= start + episodesperpage):
+                # Add a go to next page link, and skip the rest of the loop.
+                addDir(__language__(30300), url, 1, '', {}, page + 1)
+                break
+
             # Load up the initial episode information.
             info = {}
             title = item.find('title')
-            info['title'] = str(count) + '. '
+            info['title'] = str(n) + '. '
             if (title):
                 info['title'] += title.string
             info['tvshowtitle'] = name
@@ -249,7 +268,7 @@ def get_params():
                         splitparams=pairsofparams[i].split('=')
                         if (len(splitparams))==2:
                                 param[splitparams[0]]=splitparams[1]
-                                
+
         return param
 
 # Info takes Plot, date, size
@@ -260,8 +279,8 @@ def addLink(name, url, date, iconimage, info):
         ok=xbmcplugin.addDirectoryItem(handle=int(sys.argv[1]),url=url,listitem=liz)
         return ok
 
-def addDir(name, url, mode, iconimage, info):
-    u=sys.argv[0]+"?url="+urllib.quote_plus(url)+"&mode="+str(mode)+"&name="+urllib.quote_plus(name)
+def addDir(name, url, mode, iconimage, info, page = 0):
+    u=sys.argv[0]+"?url="+urllib.quote_plus(url)+"&mode="+str(mode)+"&name="+urllib.quote_plus(name) + "&page="+str(page)
     ok=True
     info["Title"] = name
     liz=xbmcgui.ListItem(name, iconImage=iconimage, thumbnailImage=iconimage)
@@ -269,36 +288,38 @@ def addDir(name, url, mode, iconimage, info):
     ok=xbmcplugin.addDirectoryItem(handle=int(sys.argv[1]),url=u,listitem=liz,isFolder=True)
     return ok
 
-params=get_params()
-url=None
-name=None
-mode=None
+params = get_params()
+url = None
+name = None
+mode = None
+page = None
 
 try:
-        url=urllib.unquote_plus(params["url"])
+        url = urllib.unquote_plus(params["url"])
 except:
         pass
 try:
-        name=urllib.unquote_plus(params["name"])
+        name = urllib.unquote_plus(params["name"])
 except:
         pass
 try:
-        mode=int(params["mode"])
+        mode = int(params["mode"])
 except:
         pass
+try:
+        page = int(params["page"])
+except:
+        page = 0
 
 print "Mode: "+str(mode)
 print "URL: "+str(url)
 print "Name: "+str(name)
+print "Page: "+str(page)
 
 if mode==None or url==None or len(url)<1:
-        print ""
         CATEGORIES()
-
 elif mode==1:
-        print ""+url
-        INDEX(name, url)
-
+        INDEX(name, url, page)
 
 xbmcplugin.endOfDirectory(int(sys.argv[1]))
 

@@ -182,7 +182,7 @@ def INDEX(name, url, page):
 
     # Figure out where to start and where to stop the pagination.
     # TODO: Fix the Episodes per Page setting.
-    episodesperpage = 25 # int(__settings__.getSetting("episodes_per_page"))
+    episodesperpage = int(float(__settings__.getSetting("episodes_per_page")))
     start = episodesperpage * int(page);
     print "Episodes per Page: " + str(episodesperpage) + "\n"
     print "Start:" + str(start);
@@ -267,6 +267,8 @@ def INDEX(name, url, page):
             addLink(info['title'], video, date, thumbnail, info)
     except:
        pass
+    xbmcplugin.setContent(int( sys.argv[1] ), 'episodes')
+    xbmcplugin.endOfDirectory(int(sys.argv[1]))
 
 def get_params():
         param=[]
@@ -288,11 +290,15 @@ def get_params():
 
 # Info takes Plot, date, size
 def addLink(name, url, date, iconimage, info):
-        ok=True
-        liz=xbmcgui.ListItem(name, date, iconImage=iconimage, thumbnailImage=iconimage)
-        liz.setInfo( type="video", infoLabels=info )
-        ok=xbmcplugin.addDirectoryItem(handle=int(sys.argv[1]),url=url,listitem=liz)
-        return ok
+        liz = xbmcgui.ListItem(name, date, iconImage=iconimage, thumbnailImage=iconimage)
+        liz.setProperty('IsPlayable', 'true')
+        liz.setInfo(type="Video", infoLabels = info)
+        return xbmcplugin.addDirectoryItem(
+            handle = int(sys.argv[1]),
+            url = url,
+            listitem = liz,
+            isFolder = False
+        )
 
 def addDir(name, url, mode, iconimage, info, page = 0):
     u=sys.argv[0]+"?url="+urllib.quote_plus(url)+"&mode="+str(mode)+"&name="+urllib.quote_plus(name) + "&page="+str(page)

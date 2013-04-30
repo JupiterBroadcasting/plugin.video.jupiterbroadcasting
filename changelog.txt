@@ -1,6 +1,7 @@
 [B]Version 2.8.x[/B]
 - #5 Episodes per page is now a setting
 - Updated Linux Action Show thumbnail
+- New show: Plan B
 
 [B]Version 2.8.1[/B]
 - #4 FauxShow: Use JupiterBroadcasting.com feeds

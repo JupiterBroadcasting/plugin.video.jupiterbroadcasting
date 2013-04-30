@@ -145,6 +145,15 @@ def CATEGORIES():
         'genre': 'Technology'
     }
 
+    # Plan B
+    shows[__language__(30018)] = {
+        'feed': 'http://feeds.feedburner.com/PlanBVideo?format=xml',
+        'feed-low': 'http://feeds.feedburner.com/planbogg?format=xml',
+        'image': os.path.join(__settings__.getAddonInfo('path'), 'resources', 'media', 'planb.jpg'),
+        'plot': __language__(30218),
+        'genre': 'Technology'
+    }
+
     # Jupiter Broadcasting Live via the RTMP stream
     addLink(
         name = __language__(30010),

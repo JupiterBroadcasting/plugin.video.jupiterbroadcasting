@@ -19,6 +19,7 @@ Shows
 * Coder Radio
 * Beer Is Tasty
 * Jupiter Files
+* Plan B
 
 Instructions
 ------------

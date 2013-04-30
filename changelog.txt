@@ -1,5 +1,6 @@
 [B]Version 1.8.1[/B]
 - FauxShow: #4 Use JupiterBroadcasting.com feeds
+- New show: Plan B
 
 [B]Version 1.8.0: July 7th, 2012[/B]
 - New show: Unfilter

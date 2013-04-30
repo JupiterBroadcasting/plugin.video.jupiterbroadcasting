@@ -9,7 +9,7 @@ def CATEGORIES():
     # List all the shows.
     shows = {}
 
-    # All Shows 
+    # All Shows
     shows[__language__(30006)] = {
         'feed': 'http://feeds2.feedburner.com/AllJupiterVideos?format=xml',
         'feed-low': 'http://feeds2.feedburner.com/AllJupiterVideos?format=xml',
@@ -144,6 +144,15 @@ def CATEGORIES():
         'genre': 'Technology'
     }
 
+    # Plan B
+    shows[__language__(30018)] = {
+        'feed': 'http://feeds.feedburner.com/PlanBVideo?format=xml',
+        'feed-low': 'http://feeds.feedburner.com/planbogg?format=xml',
+        'image': 'http://www.jupiterbroadcasting.com/images/planb-badge.jpg',
+        'plot': __language__(30218),
+        'genre': 'Technology'
+    }
+
     # Jupiter Broadcasting Live via the RTMP stream
     addLink(__language__(30010), 'rtsp://videocdn-us.geocdn.scaleengine.net/jblive/jblive.stream', '', 'http://images2.wikia.nocookie.net/__cb20110118004527/jupiterbroadcasting/images/2/24/JupiterBadgeGeneric.jpg', {
         'title': __language__(30010),
@@ -249,7 +258,7 @@ def get_params():
                         splitparams=pairsofparams[i].split('=')
                         if (len(splitparams))==2:
                                 param[splitparams[0]]=splitparams[1]
-                                
+
         return param
 
 # Info takes Plot, date, size

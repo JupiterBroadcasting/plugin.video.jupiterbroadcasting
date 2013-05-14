@@ -8,6 +8,7 @@ __language__ = __settings__.getLocalizedString
 def CATEGORIES():
     # List all the shows.
     shows = {}
+    quality = int(__settings__.getSetting("video_quality"))
 
     # All Shows
     shows[__language__(30006)] = {
@@ -153,8 +154,11 @@ def CATEGORIES():
         'genre': 'Technology'
     }
 
-    # Jupiter Broadcasting Live via the RTMP stream
-    addLink(__language__(30010), 'rtsp://videocdn-us.geocdn.scaleengine.net/jblive/jblive.stream', '', 'http://images2.wikia.nocookie.net/__cb20110118004527/jupiterbroadcasting/images/2/24/JupiterBadgeGeneric.jpg', {
+    # Jupiter Broadcasting Live via the HLS/RTMP stream
+    liveUrl = 'http://videocdn-us.geocdn.scaleengine.net/jblive-iphone/live/jblive.stream/playlist.m3u8'
+    if (quality == 1):
+        liveUrl = 'rtsp://videocdn-us.geocdn.scaleengine.net/jblive/live/jblive.stream'
+    addLink(__language__(30010), liveUrl, '', 'http://images2.wikia.nocookie.net/__cb20110118004527/jupiterbroadcasting/images/2/24/JupiterBadgeGeneric.jpg', {
         'title': __language__(30010),
         'plot': __language__(30210),
         'genre': 'Technology',
@@ -163,7 +167,6 @@ def CATEGORIES():
 
     # Loop through each of the shows and add them as directories.
     x = 2
-    quality = int(__settings__.getSetting("video_quality"))
     for name, data in shows.iteritems():
         data['count'] = x
         x = x + 1

@@ -1,3 +1,6 @@
+[B]Version 1.9.x[/B]
+- Switch between HLS/RTSP video live streaming via video quality setting
+
 [B]Version 1.8.1[/B]
 - FauxShow: #4 Use JupiterBroadcasting.com feeds
 - New show: Plan B

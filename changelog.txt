@@ -1,8 +1,8 @@
-[B]Version 1.9.x[/B]
+[B]Version 1.9.0: May 14th, 2013[/B]
 - Added HLS live streaming for high quality video
 - Added audio streams
 
-[B]Version 1.8.1[/B]
+[B]Version 1.8.1: December 10th, 2012[/B]
 - FauxShow: #4 Use JupiterBroadcasting.com feeds
 - New show: Plan B
 

@@ -26,6 +26,13 @@ Instructions
 1. Download the addon from the official XBMC Addon Repository
 2. Visit Video Addons, configure and load up Jupiter Broadcasting
 
+Development
+-----------
+```bash
+$ cd ~/.xbmc/addons/
+$ git clone git@github.com:RobLoach/plugin.video.jupiterbroadcasting.git
+```
+
 About
 -----
 * Author: [Rob Loach](http://robloach.net)

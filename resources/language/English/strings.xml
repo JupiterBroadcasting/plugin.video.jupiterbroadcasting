@@ -54,8 +54,9 @@
 
   <!-- Settings -->
   <string id="30100">General</string>
-  <string id="30101">Video Quality</string>
+  <string id="30101">Quality</string>
   <string id="30102">High</string>
   <string id="30103">Low</string>
+  <string id="30105">Audio</string>
 
 </strings>

@@ -8,6 +8,7 @@ __language__ = __settings__.getLocalizedString
 def CATEGORIES():
     # List all the shows.
     shows = {}
+    quality = int(__settings__.getSetting("video_quality"))
 
     # All Shows
     shows[__language__(30006)] = {
@@ -154,10 +155,13 @@ def CATEGORIES():
         'genre': 'Technology'
     }
 
-    # Jupiter Broadcasting Live via the RTMP stream
+    # Jupiter Broadcasting Live via the HLS/RTMP stream
+    liveUrl = 'http://videocdn-us.geocdn.scaleengine.net/jblive-iphone/live/jblive.stream/playlist.m3u8'
+    if (quality == 1):
+        liveUrl = 'rtsp://videocdn-us.geocdn.scaleengine.net/jblive/live/jblive.stream'
     addLink(
         name = __language__(30010),
-        url = 'http://videocdn-us.geocdn.scaleengine.net/jblive-iphone/live/jblive.stream/playlist.m3u8',
+        url = liveUrl,
         date = '',
         iconimage = os.path.join(__settings__.getAddonInfo('path'), 'resources', 'media', 'jupiterbroadcasting.jpg'),
         info = {
@@ -170,7 +174,6 @@ def CATEGORIES():
 
     # Loop through each of the shows and add them as directories.
     x = 2
-    quality = int(__settings__.getSetting("video_quality"))
     for name, data in shows.iteritems():
         # @TODO Get the ordering correct.
         data['count'] = x

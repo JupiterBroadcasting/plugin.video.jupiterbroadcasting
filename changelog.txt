@@ -1,9 +1,10 @@
-[B]Version 2.8.x[/B]
-- #5 Episodes per page is now a setting
-- Updated Linux Action Show thumbnail
+[B]Version 2.9.x[/B]
 - New show: Plan B
+- Episodes per page is now a setting
+- Updated Linux Action Show thumbnail
+- RTSP video live streaming via low quality setting
 
-[B]Version 2.8.1[/B]
+[B]Version 2.8.1: December 10th, 2012[/B]
 - #4 FauxShow: Use JupiterBroadcasting.com feeds
 - #2 Pagination
 - #3 Ship show images with the addon

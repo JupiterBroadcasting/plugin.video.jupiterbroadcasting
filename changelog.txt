@@ -2,7 +2,8 @@
 - New show: Plan B
 - Episodes per page is now a setting
 - Updated Linux Action Show thumbnail
-- RTSP video live streaming via low quality setting
+- Added RTSP live streaming for low quality video
+- Added audio streams
 
 [B]Version 2.8.1: December 10th, 2012[/B]
 - #4 FauxShow: Use JupiterBroadcasting.com feeds

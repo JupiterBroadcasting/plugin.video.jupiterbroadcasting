@@ -14,6 +14,7 @@ def CATEGORIES():
     shows[__language__(30006)] = {
         'feed': 'http://feeds2.feedburner.com/AllJupiterVideos?format=xml',
         'feed-low': 'http://feeds2.feedburner.com/AllJupiterVideos?format=xml',
+        'feed-audio': 'http://feeds2.feedburner.com/AllJupiterBroadcastingShowsOgg?format=xml',
         'image': os.path.join(__settings__.getAddonInfo('path'), 'resources', 'media', 'jupiterbroadcasting.jpg'),
         'plot': __language__(30206),
         'genre': 'Technology',
@@ -24,6 +25,7 @@ def CATEGORIES():
     shows[__language__(30000)] = {
         'feed': 'http://feeds.feedburner.com/computeractionshowvideo',
         'feed-low': 'http://feeds.feedburner.com/linuxactionshowipodvid?format=xml',
+        'feed-audio': 'http://feeds2.feedburner.com/TheLinuxActionShowOGG?format=xml',
         'image': os.path.join(__settings__.getAddonInfo('path'), 'resources', 'media', 'linuxactionshow.jpg'),
         'plot': __language__(30200),
         'genre': 'Technology'
@@ -33,6 +35,7 @@ def CATEGORIES():
     shows[__language__(30002)] = {
         'feed': 'http://feeds.feedburner.com/stokedhd?format=xml',
         'feed-low': 'http://feeds.feedburner.com/stokedipod?format=xml',
+        'feed-audio': 'http://feeds.feedburner.com/stoked-ogg?format=xml',
         'image': os.path.join(__settings__.getAddonInfo('path'), 'resources', 'media', 'stoked.png'),
         'plot': __language__(30202),
         'genre': 'Technology'
@@ -42,6 +45,7 @@ def CATEGORIES():
     shows[__language__(30008)] = {
         'feed': 'http://feeds.feedburner.com/techsnaphd?format=xml',
         'feed-low': 'http://feeds.feedburner.com/techsnapmobile?format=xml',
+        'feed-audio': 'http://feeds.feedburner.com/techsnapogg?format=xml',
         'image': os.path.join(__settings__.getAddonInfo('path'), 'resources', 'media', 'techsnap.jpg'),
         'plot': __language__(30208),
         'genre': 'Technology'
@@ -51,6 +55,7 @@ def CATEGORIES():
     shows[__language__(30009)] = {
         'feed': 'http://feeds.feedburner.com/scibytehd?format=xml',
         'feed-low': 'http://feeds.feedburner.com/scibytemobile?format=xml',
+        'feed-audio': 'http://feeds.feedburner.com/scibyteaudio?format=xml',
         'image': os.path.join(__settings__.getAddonInfo('path'), 'resources', 'media', 'scibyte.jpg'),
         'plot': __language__(30209),
         'genre': 'Science'
@@ -60,6 +65,7 @@ def CATEGORIES():
     shows[__language__(30014)] = {
         'feed': 'http://www.jupiterbroadcasting.com/feeds/indepthlookihd.xml',
         'feed-low': 'http://www.jupiterbroadcasting.com/feeds/indepthlookmob.xml',
+        'feed-audio': 'http://www.jupiterbroadcasting.com/feeds/indepthlookmp3.xml?format=xml',
         'image': os.path.join(__settings__.getAddonInfo('path'), 'resources', 'media', 'indepthlook.jpg'),
         'plot': __language__(30214),
         'genre': 'Technology'
@@ -69,6 +75,7 @@ def CATEGORIES():
     shows[__language__(30016)] = {
         'feed': 'http://www.jupiterbroadcasting.com/feeds/unfilterHD.xml',
         'feed-low': 'http://www.jupiterbroadcasting.com/feeds/unfilterMob.xml',
+        'feed-audio': 'http://www.jupiterbroadcasting.com/feeds/unfilterogg.xml',
         'image': os.path.join(__settings__.getAddonInfo('path'), 'resources', 'media', 'unfilter.jpg'),
         'plot': __language__(30216),
         'genre': 'Technology'
@@ -78,6 +85,7 @@ def CATEGORIES():
     shows[__language__(30011)] = {
         'feed': 'http://www.jupiterbroadcasting.com/feeds/FauxShowHD.xml',
         'feed-low': 'http://www.jupiterbroadcasting.com/feeds/FauxShowMobile.xml',
+        'feed-audio': 'http://www.jupiterbroadcasting.com/feeds/FauxShowMP3.xml',
         'image': os.path.join(__settings__.getAddonInfo('path'), 'resources', 'media', 'fauxshow.jpg'),
         'plot': __language__(30211),
         'genre': 'Comedy'
@@ -86,7 +94,8 @@ def CATEGORIES():
     # Jupiter@Nite
     shows[__language__(30004)] = {
         'feed': 'http://feeds.feedburner.com/jupiternitehd?format=xml',
-        'feed-low': 'http://feeds.feedburner.com/jupiternitehd?format=xml',
+        'feed-low': 'http://feeds.feedburner.com/jupiternitelargevid?format=xml',
+        'feed-audio': 'http://feeds.feedburner.com/jupiternitemp3?format=xml',
         'image': os.path.join(__settings__.getAddonInfo('path'), 'resources', 'media', 'jupiteratnite.jpg'),
         'plot': __language__(30204),
         'genre': 'Technology'
@@ -96,6 +105,7 @@ def CATEGORIES():
     shows[__language__(30007)] = {
         'feed': 'http://feeds.feedburner.com/MMOrgueHD?format=xml',
         'feed-low': 'http://feeds.feedburner.com/MMOrgueHD?format=xml',
+        'feed-audio': 'http://www.jupiterbroadcasting.com/feeds/AllJupiterBroadcastingShowsOGG.xml',
         'image': os.path.join(__settings__.getAddonInfo('path'), 'resources', 'media', 'mmorgue.jpg'),
         'plot': __language__(30207),
         'genre': 'Technology'
@@ -105,6 +115,7 @@ def CATEGORIES():
     shows[__language__(30003)] = {
         'feed': 'http://feeds.feedburner.com/lotsovideo?format=xml',
         'feed-low': 'http://feeds.feedburner.com/lotsovideo?format=xml',
+        'feed-audio': 'http://feeds.feedburner.com/lotsomp3?format=xml',
         'image': os.path.join(__settings__.getAddonInfo('path'), 'resources', 'media', 'lotso.jpg'),
         'plot': __language__(30203),
         'genre': 'Technology'
@@ -113,7 +124,8 @@ def CATEGORIES():
     # Beer is Tasty
     shows[__language__(30001)] = {
         'feed': 'http://feeds2.feedburner.com/jupiterbeeristasty-hd?format=xml',
-        'feed-low': 'http://feeds2.feedburner.com/jupiterbeeristasty-hd?format=xml',
+        'feed-low': 'http://feeds2.feedburner.com/BeerIsTasty?format=xml',
+        'feed-audio': 'http://feeds2.feedburner.com/BeerIsTasty?format=xml',
         'image': os.path.join(__settings__.getAddonInfo('path'), 'resources', 'media', 'beeristasty.png'),
         'plot': __language__(30201),
         'genre': 'Technology'
@@ -123,6 +135,7 @@ def CATEGORIES():
     shows[__language__(30005)] = {
         'feed': 'http://feeds.feedburner.com/ldf-video?format=xml',
         'feed-low': 'http://feeds.feedburner.com/ldf-video?format=xml',
+        'feed-audio': 'http://feeds.feedburner.com/ldf-mp3?format=xml',
         'image': os.path.join(__settings__.getAddonInfo('path'), 'resources', 'media', 'jupiterfiles.jpg'),
         'plot': __language__(30205),
         'genre': 'Technology'
@@ -132,6 +145,7 @@ def CATEGORIES():
     shows[__language__(30015)] = {
         'feed': 'http://feeds.feedburner.com/TorkedHd?format=xml',
         'feed-low': 'http://feeds.feedburner.com/TorkedMobile?format=xml',
+        'feed-audio': 'http://feeds.feedburner.com/TorkedMp3?format=xml',
         'image': os.path.join(__settings__.getAddonInfo('path'), 'resources', 'media', 'torked.jpg'),
         'plot': __language__(30215),
         'genre': 'Technology'
@@ -141,6 +155,7 @@ def CATEGORIES():
     shows[__language__(30017)] = {
         'feed': 'http://feeds.feedburner.com/coderradiovideo?format=xml',
         'feed-low': 'http://www.jupiterbroadcasting.com/feeds/coderradioogg.xml?format=xml',
+        'feed-audio': 'http://www.jupiterbroadcasting.com/feeds/coderradioogg.xml',
         'image': os.path.join(__settings__.getAddonInfo('path'), 'resources', 'media', 'coderradio.jpg'),
         'plot': __language__(30217),
         'genre': 'Technology'
@@ -150,6 +165,7 @@ def CATEGORIES():
     shows[__language__(30018)] = {
         'feed': 'http://feeds.feedburner.com/PlanBVideo?format=xml',
         'feed-low': 'http://feeds.feedburner.com/planbogg?format=xml',
+        'feed-audio': 'http://feeds.feedburner.com/planbogg?format=xml',
         'image': os.path.join(__settings__.getAddonInfo('path'), 'resources', 'media', 'planb.jpg'),
         'plot': __language__(30218),
         'genre': 'Technology'
@@ -159,6 +175,8 @@ def CATEGORIES():
     liveUrl = 'http://videocdn-us.geocdn.scaleengine.net/jblive-iphone/live/jblive.stream/playlist.m3u8'
     if (quality == 1):
         liveUrl = 'rtsp://videocdn-us.geocdn.scaleengine.net/jblive/live/jblive.stream'
+    elif (quality == 2):
+        liveUrl = 'http://jblive.am'
     addLink(
         name = __language__(30010),
         url = liveUrl,
@@ -182,6 +200,8 @@ def CATEGORIES():
         feed = data['feed'] # High by default.
         if (quality == 1):
             feed = data['feed-low']
+        elif (quality == 2):
+            feed = data['feed-audio']
         addDir(name, feed, 1, data['image'], data)
 
 def INDEX(name, url, page):

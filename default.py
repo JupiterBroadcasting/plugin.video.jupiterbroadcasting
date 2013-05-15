@@ -176,7 +176,7 @@ def CATEGORIES():
     if (quality == 1):
         liveUrl = 'rtsp://videocdn-us.geocdn.scaleengine.net/jblive/live/jblive.stream'
     elif (quality == 2):
-        liveUrl = 'http://jblive.am'
+        liveUrl = 'http://www.jupiterbroadcasting.com/listen/jbradiofm.m3u'
     addLink(
         name = __language__(30010),
         url = liveUrl,

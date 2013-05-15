@@ -174,7 +174,7 @@ def CATEGORIES():
     if (quality == 1):
         liveUrl = 'rtsp://videocdn-us.geocdn.scaleengine.net/jblive/live/jblive.stream'
     elif (quality == 2):
-        liveUrl = 'http://jblive.am'
+        liveUrl = 'http://www.jupiterbroadcasting.com/listen/jbradiofm.m3u'
     addLink(__language__(30010), liveUrl, '', 'http://images2.wikia.nocookie.net/__cb20110118004527/jupiterbroadcasting/images/2/24/JupiterBadgeGeneric.jpg', {
         'title': __language__(30010),
         'plot': __language__(30210),

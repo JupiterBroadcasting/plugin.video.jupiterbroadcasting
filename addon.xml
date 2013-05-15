@@ -12,8 +12,12 @@
         <provides>video</provides>
   </extension>
   <extension point="xbmc.addon.metadata">
-    <summary>Jupiter Broadcasting video addon</summary>
-    <description>Watch shows from the Jupiter Broadcasting Network including the Linux Action Show, TechSNAP, SciByte, FauxShow, Coder Radio, and more.</description>
+    <summary lang="en">Jupiter Broadcasting video addon</summary>
+    <description lang="en">Watch shows from the Jupiter Broadcasting Network including the Linux Action Show, TechSNAP, SciByte, FauxShow, Coder Radio, and more.</description>
+    <disclaimer lang="en">Feel free to use this script. For information, visit Jupiter Broadcasting.</disclaimer>
+    <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+    <website>http://jupiterbroadcasting.com</website>
+    <source>http://github.com/robloach/plugin.video.jupiterbroadcasting</source>
     <platform>all</platform>
     <language>en</language>
   </extension>

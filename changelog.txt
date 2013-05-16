@@ -1,4 +1,4 @@
-[B]Version 2.9.1: May 14th, 2013[/B]
+[B]Version 2.9.2: May 16th, 2013[/B]
 - New show: Plan B
 - Episodes per page is now a setting
 - Updated Linux Action Show thumbnail

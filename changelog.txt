@@ -1,3 +1,6 @@
+[B]Version 1.9.1: August 21st, 2013[/B]
+- New show: Linux Unplugged
+
 [B]Version 1.9.0: May 14th, 2013[/B]
 - Added HLS live streaming for high quality video
 - Added audio streams

@@ -181,12 +181,12 @@ def CATEGORIES():
         'genre': 'Technology'
     }
     # BSD Now HD!
-    shows[__language__(30021)] = {
+    shows[__language__(30020)] = {
         'feed': 'http://feeds.feedburner.com/BsdNowHd?format=xml',
         'feed-low': 'http://feeds.feedburner.com/BsdNowMobile?format=xml',
         'feed-audio': 'http://feeds.feedburner.com/BsdNowOgg?format=xml',
         'image': os.path.join(__settings__.getAddonInfo('path'), 'resources', 'media', 'bsdnow.png'),
-        'plot': __language__(30221),
+        'plot': __language__(30220),
         'genre': 'Technology'
     }
     # Jupiter Broadcasting Live via the HLS/RTMP stream

@@ -180,7 +180,15 @@ def CATEGORIES():
         'plot': __language__(30219),
         'genre': 'Technology'
     }
-
+    # BSD Now
+    shows[__language__(30020)] = {
+        'feed': 'http://feeds.feedburner.com/BsdNowHd?format=xml',
+        'feed-low': 'http://feeds.feedburner.com/BsdNowMobile?format=xml',
+        'feed-audio': 'http://feeds.feedburner.com/BsdNowOgg?format=xml',
+        'image': os.path.join(__settings__.getAddonInfo('path'), 'resources', 'media', 'bsdnow.jpg'),
+        'plot': __language__(30220),
+        'genre': 'Technology'
+    }
     # Jupiter Broadcasting Live via the HLS/RTMP stream
     liveUrl = 'http://videocdn-us.geocdn.scaleengine.net/jblive-iphone/live/jblive.stream/playlist.m3u8'
     if (quality == 1):

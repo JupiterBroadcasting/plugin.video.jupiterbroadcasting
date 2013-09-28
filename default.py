@@ -23,7 +23,7 @@ def CATEGORIES():
 
     # Linux Action Show
     shows[__language__(30000)] = {
-        'feed': 'http://feeds.feedburner.com/computeractionshowvideo',
+        'feed': 'http://feeds.feedburner.com/linuxashd?format=xml',
         'feed-low': 'http://feeds.feedburner.com/linuxactionshowipodvid?format=xml',
         'feed-audio': 'http://feeds2.feedburner.com/TheLinuxActionShowOGG?format=xml',
         'image': os.path.join(__settings__.getAddonInfo('path'), 'resources', 'media', 'linuxactionshow.jpg'),

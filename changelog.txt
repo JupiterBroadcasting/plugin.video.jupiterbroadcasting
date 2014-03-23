@@ -1,4 +1,7 @@
-[B]Version 3.0.1:September 15th, 2013[/B]
+[B]Version 3.0.2: TBD[/B]
+- Updated documentation
+
+[B]Version 3.0.1: September 15th, 2013[/B]
 - New Show: BSD Now
 - Ammended language numbering to match system
 

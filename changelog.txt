@@ -1,4 +1,4 @@
-[B]Version 3.0.3: March 23rd, 2014[/B]
+[B]Version 3.0.4: March 23rd, 2014[/B]
 - Updated documentation
 
 [B]Version 3.0.1: September 15th, 2013[/B]

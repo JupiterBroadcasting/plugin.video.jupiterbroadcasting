@@ -18,20 +18,21 @@ Watch shows from the [Jupiter Broadcasting](http://jupiterbroadcasting.com) netw
 
 ## Archive
 
-* STOked
-* TORked
-* In Depth Look
-* Jupiter@Nite
-* The MMOrgue
-* LOTSO
-* Beer Is Tasty
-* Jupiter Files
+* [STOked](http://www.jupiterbroadcasting.com/show/stoked/)
+* [TORked](http://www.jupiterbroadcasting.com/show/torked/)
+* [In Depth Look](http://www.jupiterbroadcasting.com/show/indepthlook/)
+* [Jupiter@Nite](http://www.jupiterbroadcasting.com/show/nite/)
+* [MMOrgue](http://www.jupiterbroadcasting.com/show/mmorgue/)
+* [LOTSO](http://www.jupiterbroadcasting.com/show/legend-of-the-stoned-owl/)
+* [Beer Is Tasty](http://www.jupiterbroadcasting.com/show/beeristasty/)
+* [Jupiter Files](http://www.jupiterbroadcasting.com/?s=%22jupiter+files%22)
 
 
-## Instructions
+## Install
 
-1. Download the addon from the official XBMC Addon Repository
-2. Visit Video Addons, configure and load up Jupiter Broadcasting
+1. Visit Video Addons
+2. Select Get More...
+3. Find and select the Jupiter Broadcasting addon
 
 
 ## Development

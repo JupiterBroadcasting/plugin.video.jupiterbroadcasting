@@ -1,3 +1,6 @@
+[B]Version 3.0.6 April 6th, 2014[/B]
+-Add new logo for Linux Action Show and Linux Unplugged
+
 [B]Version 3.0.5: April 3rd, 2014[/B]
 -Change Logo to new Jupiter Broadcasting Logo
 

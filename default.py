@@ -197,6 +197,7 @@ def CATEGORIES():
     #    'image': os.path.join(__settings__.getAddonInfo('path'), 'resources', 'media', 'How_To_Linux.jpg'),
     #    'plot': __language__(30221),
     #    'genre': 'Technology'
+    #}
 
     # Jupiter Broadcasting Live via the HLS/RTMP stream
     liveUrl = 'http://videocdn-us.geocdn.scaleengine.net/jblive-iphone/live/jblive.stream/playlist.m3u8'

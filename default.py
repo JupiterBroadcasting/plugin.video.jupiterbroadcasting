@@ -195,7 +195,7 @@ def CATEGORIES():
     #    'feed-low': '',
     #    'feed-audio': '',
     #    'image': os.path.join(__settings__.getAddonInfo('path'), 'resources', 'media', 'How_To_Linux.jpg'),
-    #    'plot': __language__(30221),
+    #    'plot': __language__(30021),
     #    'genre': 'Technology'
     #}
 

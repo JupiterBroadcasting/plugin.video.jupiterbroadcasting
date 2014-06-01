@@ -26,7 +26,7 @@ def CATEGORIES():
         'feed': 'http://feeds.feedburner.com/linuxashd?format=xml',
         'feed-low': 'http://feeds.feedburner.com/linuxactionshowipodvid?format=xml',
         'feed-audio': 'http://feeds2.feedburner.com/TheLinuxActionShowOGG?format=xml',
-        'image': os.path.join(__settings__.getAddonInfo('path'), 'resources', 'media', 'linuxactionshow.jpg'),
+        'image': os.path.join(__settings__.getAddonInfo('path'), 'resources', 'media', 'LAS_Colored.jpg'),
         'plot': __language__(30200),
         'genre': 'Technology'
     }
@@ -176,7 +176,7 @@ def CATEGORIES():
         'feed': 'http://feeds.feedburner.com/linuxunvid?format=xml',
         'feed-low': 'http://feeds.feedburner.com/linuxunogg?format=xml',
         'feed-audio': 'http://feeds.feedburner.com/linuxunogg?format=xml',
-        'image': os.path.join(__settings__.getAddonInfo('path'), 'resources', 'media', 'linuxunplugged.jpg'),
+        'image': os.path.join(__settings__.getAddonInfo('path'), 'resources', 'media', 'Linux_Unplugged.jpg'),
         'plot': __language__(30219),
         'genre': 'Technology'
     }
@@ -189,6 +189,16 @@ def CATEGORIES():
         'plot': __language__(30220),
         'genre': 'Technology'
     }
+    #How To Linux
+    #shows[__language__(30021)] = {
+    #    'feed': '',
+    #    'feed-low': '',
+    #    'feed-audio': '',
+    #    'image': os.path.join(__settings__.getAddonInfo('path'), 'resources', 'media', 'How_To_Linux.jpg'),
+    #    'plot': __language__(30021),
+    #    'genre': 'Technology'
+    #}
+
     # Jupiter Broadcasting Live via the HLS/RTMP stream
     liveUrl = 'http://videocdn-us.geocdn.scaleengine.net/jblive-iphone/live/jblive.stream/playlist.m3u8'
     if (quality == 1):

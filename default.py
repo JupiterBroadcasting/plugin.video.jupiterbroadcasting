@@ -403,4 +403,3 @@ elif mode==1:
         INDEX(name, url, page)
 
 xbmcplugin.endOfDirectory(int(sys.argv[1]))
-

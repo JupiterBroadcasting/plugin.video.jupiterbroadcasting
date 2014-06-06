@@ -15,6 +15,7 @@ Watch shows from the [Jupiter Broadcasting](http://jupiterbroadcasting.com) netw
 * [Plan B](http://www.jupiterbroadcasting.com/show/planb/)
 * [SciByte](http://www.jupiterbroadcasting.com/show/scibyte/)
 * [Unfilter](http://www.jupiterbroadcasting.com/show/unfilter/)
+* [Tech Talk Today](http://www.jupiterbroadcasting.com/show/today/)
 
 ## Archive
 

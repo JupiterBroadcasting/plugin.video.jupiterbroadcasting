@@ -180,6 +180,7 @@ def CATEGORIES():
         'plot': __language__(30219),
         'genre': 'Technology'
     }
+
     # BSD Now
     shows[__language__(30020)] = {
         'feed': 'http://feeds.feedburner.com/BsdNowHd?format=xml',
@@ -198,6 +199,16 @@ def CATEGORIES():
     #    'plot': __language__(30021),
     #    'genre': 'Technology'
     #}
+
+    # Tech Talk Today
+    shows[__language__(30022)] = {
+        'feed': 'http://feedpress.me/t3mob',
+        'feed-low': 'http://feedpress.me/t3ogg',
+        'feed-audio': 'http://feedpress.me/t3ogg',
+        'image': os.path.join(__settings__.getAddonInfo('path'), 'resources', 'media', 'techtalktoday.jpg'),
+        'plot': __language__(30222),
+        'genre': 'Technology'
+    }
 
     # Jupiter Broadcasting Live via the HLS/RTMP stream
     liveUrl = 'http://videocdn-us.geocdn.scaleengine.net/jblive-iphone/live/jblive.stream/playlist.m3u8'

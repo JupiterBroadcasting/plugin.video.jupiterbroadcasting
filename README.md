@@ -16,6 +16,7 @@ Watch shows from the [Jupiter Broadcasting](http://jupiterbroadcasting.com) netw
 * [SciByte](http://www.jupiterbroadcasting.com/show/scibyte/)
 * [Unfilter](http://www.jupiterbroadcasting.com/show/unfilter/)
 * [Tech Talk Today](http://www.jupiterbroadcasting.com/show/today/)
+* [HowTo Linux](http://www.jupiterbroadcasting.com/show/h2l/)
 
 ## Archive
 

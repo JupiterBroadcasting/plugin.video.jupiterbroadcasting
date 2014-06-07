@@ -205,7 +205,7 @@ def CATEGORIES():
         'feed': 'http://feedpress.me/t3mob',
         'feed-low': 'http://feedpress.me/t3ogg',
         'feed-audio': 'http://feedpress.me/t3ogg',
-        'image': os.path.join(__settings__.getAddonInfo('path'), 'resources', 'media', 'techtalktoday.jpg'),
+        'image': os.path.join(__settings__.getAddonInfo('path'), 'resources', 'media', 'techtalktoday.png'),
         'plot': __language__(30222),
         'genre': 'Technology'
     }

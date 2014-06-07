@@ -190,22 +190,22 @@ def CATEGORIES():
         'plot': __language__(30220),
         'genre': 'Technology'
     }
-    #How To Linux
-    #shows[__language__(30021)] = {
-    #    'feed': '',
-    #    'feed-low': '',
-    #    'feed-audio': '',
-    #    'image': os.path.join(__settings__.getAddonInfo('path'), 'resources', 'media', 'How_To_Linux.jpg'),
-    #    'plot': __language__(30021),
-    #    'genre': 'Technology'
-    #}
+    # HowTo Linux
+    shows[__language__(30021)] = {
+        'feed': 'http://feeds.feedburner.com/HowtoLinuxHd?format=xml',
+        'feed-low': 'http://feeds.feedburner.com/HowtoLinuxMobile?format=xml',
+        'feed-audio': 'http://feeds.feedburner.com/HowtoLinuxOgg?format=xml',
+        'image': os.path.join(__settings__.getAddonInfo('path'), 'resources', 'media', 'howtolinux.jpg'),
+        'plot': __language__(30221),
+        'genre': 'Technology'
+    }
 
     # Tech Talk Today
     shows[__language__(30022)] = {
         'feed': 'http://feedpress.me/t3mob',
         'feed-low': 'http://feedpress.me/t3ogg',
         'feed-audio': 'http://feedpress.me/t3ogg',
-        'image': os.path.join(__settings__.getAddonInfo('path'), 'resources', 'media', 'techtalktoday.jpg'),
+        'image': os.path.join(__settings__.getAddonInfo('path'), 'resources', 'media', 'techtalktoday.png'),
         'plot': __language__(30222),
         'genre': 'Technology'
     }

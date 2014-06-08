@@ -39,10 +39,17 @@ Watch shows from the [Jupiter Broadcasting](http://jupiterbroadcasting.com) netw
 
 ## Development
 
+### Environment
+
 ```bash
 $ cd ~/.xbmc/addons/
 $ git clone git@github.com:RobLoach/plugin.video.jupiterbroadcasting.git
 ```
+
+### Tools
+
+* [PEP 8 Style Guide](http://legacy.python.org/dev/peps/pep-0008/) for consistent styles
+* [Pylint](http://pylint.org)
 
 
 ## About

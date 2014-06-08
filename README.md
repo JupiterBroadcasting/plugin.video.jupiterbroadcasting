@@ -48,7 +48,7 @@ $ git clone git@github.com:RobLoach/plugin.video.jupiterbroadcasting.git
 
 ### Tools
 
-* [PEP 8 Style Guide](http://legacy.python.org/dev/peps/pep-0008/) for consistent styles
+* [Google Python Style Guide](http://google-styleguide.googlecode.com/svn/trunk/pyguide.html) for consistent styles
 * [Pylint](http://pylint.org)
 
 

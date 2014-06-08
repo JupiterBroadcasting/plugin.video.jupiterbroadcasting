@@ -1,9 +1,10 @@
 #!/usr/bin/env python
 """
 Jupiter Broadcasting XBMC Addon
+http://github.com/robloach/plugin.video.jupiterbroadcasting
 """
 
-import urllib, urllib2, re, xbmcplugin, xbmcgui, xbmcaddon, os
+import sys, urllib, urllib2, re, xbmcplugin, xbmcgui, xbmcaddon, os
 from BeautifulSoup import BeautifulStoneSoup
 
 __settings__ = xbmcaddon.Addon(id='plugin.video.jupiterbroadcasting')
@@ -281,15 +282,12 @@ def index(name, url, page):
     soup = BeautifulStoneSoup(
         data,
         convertEntities=BeautifulStoneSoup.XML_ENTITIES,
-        selfClosingTags=['media:thumbnail', 'enclosure', 'media:content']
-    )
+        selfClosingTags=['media:thumbnail', 'enclosure', 'media:content'])
     count = 1
 
     # Figure out where to start and where to stop the pagination.
     episodesperpage = int(float(__settings__.getSetting('episodes_per_page')))
     start = episodesperpage * int(page)
-    print 'Episodes per Page: ' + str(episodesperpage) + "\n"
-    print 'Start: ' + str(start)
     currentindex = 0
 
     # Wrap in a try/catch to protect from broken RSS feeds.
@@ -306,16 +304,14 @@ def index(name, url, page):
                     __settings__.getAddonInfo('path'),
                     'resources',
                     'media',
-                    'next.png'
-                )
+                    'next.png')
                 add_dir(
                     name=__language__(30300),
                     url=url,
                     mode=1,
                     iconimage=next_image,
                     info={},
-                    page=page + 1
-                )
+                    page=page + 1)
                 break
 
             # Load up the initial episode information.
@@ -329,17 +325,7 @@ def index(name, url, page):
             count += 1 # Increment the show count.
 
             # Get the video enclosure.
-            video = ''
-            enclosure = item.find('enclosure')
-            if enclosure != None:
-                video = enclosure.get('href')
-                if video == None:
-                    video = enclosure.get('url')
-                if video == None:
-                    video = ''
-                size = enclosure.get('length')
-                if size != None:
-                    info['size'] = int(size)
+            video = get_item_video(item, info)
 
             # Find the Date
             date = ''
@@ -354,13 +340,7 @@ def index(name, url, page):
                 info['plot'] = info['plotoutline'] = summary.string.strip()
 
             # Plot.
-            description = item.find('description')
-            if description != None:
-                # Attempt to strip the HTML tags.
-                try:
-                    info['plot'] = re.sub(r'<[^>]*?>', '', description.string)
-                except:
-                    info['plot'] = description.string
+            get_item_description(item, info)
 
             # Author/Director.
             author = item.find('itunes:author')
@@ -380,6 +360,28 @@ def index(name, url, page):
     xbmcplugin.setContent(int(sys.argv[1]), 'episodes')
     xbmcplugin.endOfDirectory(int(sys.argv[1]))
 
+def get_item_description(item, info):
+    description = item.find('description')
+    if description != None:
+        # Attempt to strip the HTML tags.
+        try:
+            info['plot'] = re.sub(r'<[^>]*?>', '', description.string)
+        except:
+            info['plot'] = description.string
+
+def get_item_video(item, info):
+    enclosure = item.find('enclosure')
+    if enclosure != None:
+        video = enclosure.get('href')
+        if video == None:
+            video = enclosure.get('url')
+        if video == None:
+            video = ''
+        size = enclosure.get('length')
+        if size != None:
+            info['size'] = int(size)
+    return video
+
 def get_params():
     """
     Retrieves the current existing parameters from XBMC.
@@ -398,7 +400,6 @@ def get_params():
             splitparams = pairsofparams[i].split('=')
             if (len(splitparams)) == 2:
                 param[splitparams[0]] = splitparams[1]
-
     return param
 
 # Info takes Plot, date, size
@@ -456,11 +457,6 @@ try:
     PAGE = int(PARAMS["page"])
 except:
     PAGE = 0
-
-print "Mode: " + str(MODE)
-print "URL: " + str(URL)
-print "Name: " + str(NAME)
-print "Page: " + str(PAGE)
 
 if MODE == None or URL == None or len(URL) < 1:
     categories()

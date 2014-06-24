@@ -1,3 +1,9 @@
+[B]Version 3.1.1 June 23rd, 2014[/B]
+- Updated artwork for active shows: Linux Action Show and Linux Unplugged
+- Updated artwork work archived shows: Torked and In Depth Look 
+- Updated artwork for addon main icon with new color logo
+- Improved the assets filename structure
+
 [B]Version 3.1.0 June 5th, 2014[/B]
 - New Show: Tech Talk Today
 - New Show: HowTo Linux

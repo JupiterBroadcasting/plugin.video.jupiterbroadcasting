@@ -23,7 +23,7 @@ def get_shows():
         'feed': feedburner + 'AllJupiterVideos?format=xml',
         'feed-low': feedburner + 'AllJupiterVideos?format=xml',
         'feed-audio': feedburner + '/AllJupiterBroadcastingShowsOgg?format=xml',
-        'image': 'jupiter-broadcasting.jpg',
+        'image': 'most-recent.jpg',
         'plot': __language__(30206),
         'genre': 'Technology',
         'count': 0
@@ -244,7 +244,7 @@ def categories():
             __settings__.getAddonInfo('path'),
             'resources',
             'media',
-            'jupiterbroadcasting.jpg'),
+            'jblive-tv.jpg'),
         info={
             'title': __language__(30010),
             'plot': __language__(30210),

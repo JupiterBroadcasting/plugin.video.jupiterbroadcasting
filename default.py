@@ -34,7 +34,7 @@ def get_shows():
         'feed': feedburner + 'linuxashd?format=xml',
         'feed-low': feedburner + 'linuxactionshowipodvid?format=xml',
         'feed-audio': feedburner + 'TheLinuxActionShowOGG?format=xml',
-        'image': 'LAS_Colored.jpg',
+        'image': 'linux-action-show.jpg',
         'plot': __language__(30200),
         'genre': 'Technology'
     }

@@ -2,7 +2,7 @@
 <addon
     id="plugin.video.jupiterbroadcasting"
     name="Jupiter Broadcasting"
-    version="3.1.1"
+    version="3.2.0"
     provider-name="Rob Loach">
     <requires>
         <import addon="xbmc.python" version="2.1.0" />
@@ -15,7 +15,7 @@
         <summary lang="en">Jupiter Broadcasting video addon</summary>
         <description lang="en">
             Watch shows from the Jupiter Broadcasting Network including the
-            Linux Action Show, TechSNAP, SciByte, FauxShow, Coder Radio, and
+            Linux Action Show, TechSNAP, FauxShow, Coder Radio, Women's Tech Radio and
             more.
         </description>
         <disclaimer lang="en">

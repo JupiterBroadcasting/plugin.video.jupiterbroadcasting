@@ -6,28 +6,29 @@ Watch shows from the [Jupiter Broadcasting](http://jupiterbroadcasting.com) netw
 ## Shows
 
 * [JBLive.TV](http://jblive.tv)
-* [Linux Action Show](http://www.jupiterbroadcasting.com/show/linuxactionshow/)
 * [BSD Now](http://www.jupiterbroadcasting.com/show/bsdnow/)
 * [Coder Radio](http://www.jupiterbroadcasting.com/show/coderradio/)
-* [Linux Unplugged](http://www.jupiterbroadcasting.com/show/linuxun/)
-* [TechSNAP](http://www.jupiterbroadcasting.com/show/techsnap/)
 * [FauxShow](http://www.jupiterbroadcasting.com/show/fauxshow/)
+* [Linux Action Show](http://www.jupiterbroadcasting.com/show/linuxactionshow/)
+* [Linux Unplugged](http://www.jupiterbroadcasting.com/show/linuxun/)
 * [Plan B](http://www.jupiterbroadcasting.com/show/planb/)
 * [SciByte](http://www.jupiterbroadcasting.com/show/scibyte/)
-* [Unfilter](http://www.jupiterbroadcasting.com/show/unfilter/)
 * [Tech Talk Today](http://www.jupiterbroadcasting.com/show/today/)
-* [HowTo Linux](http://www.jupiterbroadcasting.com/show/h2l/)
+* [TechSNAP](http://www.jupiterbroadcasting.com/show/techsnap/)
+* [Unfilter](http://www.jupiterbroadcasting.com/show/unfilter/)
+* [Women's Tech Radio](http://www.jupiterbroadcasting.com/show/wtr/)
 
 ## Archive
 
+* [Beer Is Tasty](http://www.jupiterbroadcasting.com/show/beeristasty/)
+* [HowTo Linux](http://www.jupiterbroadcasting.com/show/h2l/)
+* [In Depth Look](http://www.jupiterbroadcasting.com/show/indepthlook/)
+* [Jupiter Files](http://www.jupiterbroadcasting.com/?s=%22jupiter+files%22)
+* [Jupiter@Nite](http://www.jupiterbroadcasting.com/show/nite/)
+* [LOTSO](http://www.jupiterbroadcasting.com/show/legend-of-the-stoned-owl/)
+* [MMOrgue](http://www.jupiterbroadcasting.com/show/mmorgue/)
 * [STOked](http://www.jupiterbroadcasting.com/show/stoked/)
 * [TORked](http://www.jupiterbroadcasting.com/show/torked/)
-* [In Depth Look](http://www.jupiterbroadcasting.com/show/indepthlook/)
-* [Jupiter@Nite](http://www.jupiterbroadcasting.com/show/nite/)
-* [MMOrgue](http://www.jupiterbroadcasting.com/show/mmorgue/)
-* [LOTSO](http://www.jupiterbroadcasting.com/show/legend-of-the-stoned-owl/)
-* [Beer Is Tasty](http://www.jupiterbroadcasting.com/show/beeristasty/)
-* [Jupiter Files](http://www.jupiterbroadcasting.com/?s=%22jupiter+files%22)
 
 
 ## Install

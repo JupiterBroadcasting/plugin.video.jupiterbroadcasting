@@ -1,3 +1,6 @@
+[B]Version 3.2.0 November 19th, 2014[/B]
+- New Show: Women's Tech Radio
+
 [B]Version 3.1.1 June 24th, 2014[/B]
 - Updated artwork for active shows: Linux Action Show and Linux Unplugged
 - Updated artwork work archived shows: Torked and In Depth Look 

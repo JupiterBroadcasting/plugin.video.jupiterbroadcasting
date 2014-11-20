@@ -218,6 +218,16 @@ def get_shows():
         'genre': 'Technology'
     }
 
+    # Women's Tech Radio
+    shows[__language__(30023)] = {
+        'feed': feedburner + 'wtrmobile?format=xml',
+        'feed-low': feedburner + 'wtrogg?format=xml',
+        'feed-audio': feedburner + 'wtrmp3?format=xml',
+        'image': 'womens-talk-radio.png',
+        'plot': __language__(30223),
+        'genre': 'Technology'
+    }
+
     return shows
 
 def categories():

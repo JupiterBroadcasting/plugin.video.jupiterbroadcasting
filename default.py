@@ -180,9 +180,9 @@ def CATEGORIES():
     }
 
     # Jupiter Broadcasting Live via the HLS/RTMP stream
-    liveUrl = 'http://videocdn-us.geocdn.scaleengine.net/jblive-iphone/live/jblive.stream/playlist.m3u8'
+    liveUrl = 'http://jblive.videocdn.scaleengine.net/jb-live/play/jblive.stream/playlist.m3u8"'
     if (quality == 1):
-        liveUrl = 'rtsp://videocdn-us.geocdn.scaleengine.net/jblive/live/jblive.stream'
+        liveUrl = 'rtsp://jblive.videocdn.scaleengine.net/jb-live/play/jblive.stream'
     elif (quality == 2):
         liveUrl = 'http://www.jupiterbroadcasting.com/listen/jbradiofm.m3u'
     addLink(__language__(30010), liveUrl, '', 'http://images2.wikia.nocookie.net/__cb20110118004527/jupiterbroadcasting/images/2/24/JupiterBadgeGeneric.jpg', {

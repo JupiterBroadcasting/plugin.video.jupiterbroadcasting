@@ -241,9 +241,9 @@ def categories():
 
     # Jupiter Broadcasting Live via the HLS/RTMP stream
     live_url = 'http://' + scale
-    live_url += 'jblive-iphone/live/jblive.stream/playlist.m3u8'
+    live_url += 'jb-live/play/jblive.stream/playlist.m3u8'
     if quality == 1:
-        live_url = 'rtsp://' + scale + 'jblive/live/jblive.stream'
+        live_url = 'rtsp://' + scale + 'jb-live/play/jblive.stream'
     elif quality == 2:
         live_url = 'http://jblive.fm'
     add_link(

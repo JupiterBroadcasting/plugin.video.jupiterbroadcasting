@@ -251,7 +251,7 @@ def categories():
         live_url = 'http://jblive.fm'
 
     add_link(
-        name=__language__(30010) + str(livestream),
+        name=__language__(30010),
         url=live_url,
         date='',
         iconimage=os.path.join(
@@ -260,7 +260,7 @@ def categories():
             'media',
             'jblive-tv.jpg'),
         info={
-            'title': __language__(30010) + str(livestream),
+            'title': __language__(30010),
             'plot': __language__(30210),
             'genre': 'Technology',
             'count': 1

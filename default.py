@@ -237,17 +237,21 @@ def categories():
     # List all the shows.
     shows = get_shows()
     quality = int(__settings__.getSetting("video_quality"))
-    scale = 'jblive.videocdn.scaleengine.net/'
 
-    # Jupiter Broadcasting Live via the HLS/RTMP stream
-    live_url = 'http://' + scale
-    live_url += 'jb-live/play/jblive.stream/playlist.m3u8'
-    if quality == 1:
-        live_url = 'rtsp://' + scale + 'jb-live/play/jblive.stream'
-    elif quality == 2:
+    # Add the Live Stream
+    livestream = int(__settings__.getSetting("live_stream"))
+    live_url = ''
+    if livestream == 0: # RTSP
+        live_url = 'rtsp://jblive.videocdn.scaleengine.net/jb-live/play/jblive.stream'
+    if livestream == 1: # RTMP
+        live_url = 'rtmp://jblive.videocdn.scaleengine.net/jb-live/play/jblive.stream'
+    elif livestream == 2: # HLS
+        live_url = 'http://jblive.videocdn.scaleengine.net/jb-live/play/jblive.stream/playlist.m3u8'
+    elif livestream == 3: # Audio
         live_url = 'http://jblive.fm'
+
     add_link(
-        name=__language__(30010),
+        name=__language__(30010) + str(livestream),
         url=live_url,
         date='',
         iconimage=os.path.join(
@@ -256,7 +260,7 @@ def categories():
             'media',
             'jblive-tv.jpg'),
         info={
-            'title': __language__(30010),
+            'title': __language__(30010) + str(livestream),
             'plot': __language__(30210),
             'genre': 'Technology',
             'count': 1

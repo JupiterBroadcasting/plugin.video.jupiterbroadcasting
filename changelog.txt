@@ -1,4 +1,4 @@
-[B]Version 3.2.1 xxxx[/B]
+[B]Version 3.2.1 February 7th, 2015[/B]
 - Add ability to change Live Stream type
 
 [B]Version 3.2.0 November 19th, 2014[/B]

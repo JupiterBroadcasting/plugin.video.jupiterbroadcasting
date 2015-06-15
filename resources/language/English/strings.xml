@@ -64,6 +64,9 @@
   <string id="30022">Tech Talk Today</string>
   <string id="30222">Daily coverage of the latest technology-related headlines.</string>
 
+  <string id="30023">Women's Tech Radio</string>
+  <string id="30223">Women's Tech Radio brings out the voices of women in technology related fields. It explores their journey and collects the resources used along the way. Angela and Paige host this laid-back interview style talk show with tidbits about their life and favorite memories in technology.</string>
+
   <!-- Settings -->
   <string id="30100">General</string>
   <string id="30101">Quality</string>
@@ -71,8 +74,13 @@
   <string id="30103">Low</string>
   <string id="30104">Episodes per Page</string>
   <string id="30105">Audio</string>
+  <string id="30106">Live Stream Type</string>
 
   <!-- Misc -->
   <string id="30300">Older episodes</string>
+  <string id="30301">RTSP</string>
+  <string id="30302">RTMP</string>
+  <string id="30303">HLS</string>
+  <string id="30304">Audio</string>
 
 </strings>

@@ -13,8 +13,11 @@
     </extension>
     <extension point="xbmc.addon.metadata">
         <summary lang="en">Jupiter Broadcasting video addon</summary>
+        <summary lang="bg">Видео добавка за Jupiter Broadcasting</summary>
         <description lang="en">Watch shows from the Jupiter Broadcasting Network including the Linux Action Show, TechSNAP, FauxShow, Coder Radio, Women's Tech Radio and more.</description>
+        <description lang="bg">Гледайте предавания от мрежата на Jupiter Broadcasting: Linux Action Show, TechSNAP, FauxShow, Coder Radio, Women's Tech Radio и други.</description>
         <disclaimer lang="en">For more information, visit JupiterBroadcasting.com.</disclaimer>
+        <disclaimer lang="bg">За повече информация посетете www.JupiterBroadcasting.com</disclaimer>
         <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
         <website>http://jupiterbroadcasting.com</website>
         <source>http://github.com/robloach/plugin.video.jupiterbroadcasting</source>

@@ -1,3 +1,6 @@
+[B]Version 3.2.2 December 24th, 2015[/B]
+- Fix Women's Tech Radio logo
+
 [B]Version 3.2.1 February 7th, 2015[/B]
 - Add ability to change Live Stream type
 

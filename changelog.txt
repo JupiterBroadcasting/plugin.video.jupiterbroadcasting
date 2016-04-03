@@ -1,3 +1,6 @@
+[B]Unreleased[/B]
+- Updated documentation to reference Kodi, rather than XBMC
+
 [B]Version 3.2.2 December 24th, 2015[/B]
 - Fix Women's Tech Radio logo
 

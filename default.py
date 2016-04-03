@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 """
-Jupiter Broadcasting XBMC Addon
+Jupiter Broadcasting Kodi Addon
 http://github.com/robloach/plugin.video.jupiterbroadcasting
 """
 

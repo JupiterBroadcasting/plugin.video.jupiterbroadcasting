@@ -1,6 +1,6 @@
-# Jupiter Broadcasting XBMC Addon
+# Jupiter Broadcasting Kodi Addon
 
-Watch shows from the [Jupiter Broadcasting](http://jupiterbroadcasting.com) network in [XBMC](http://xbmc.org/).
+Watch shows from the [Jupiter Broadcasting](http://jupiterbroadcasting.com) network in [Kodi](http://kodi.tv).
 
 ![Jupiter Broadcasting Kodi Addon Screenshot](resources/media/screenshot.jpg)
 
@@ -44,7 +44,7 @@ Watch shows from the [Jupiter Broadcasting](http://jupiterbroadcasting.com) netw
 ### Environment
 
 ```bash
-$ cd ~/.xbmc/addons/
+$ cd ~/.kodi/addons/
 $ git clone git@github.com:RobLoach/plugin.video.jupiterbroadcasting.git
 ```
 

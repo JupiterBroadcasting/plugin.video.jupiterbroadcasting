@@ -2,6 +2,7 @@
 
 Watch shows from the [Jupiter Broadcasting](http://jupiterbroadcasting.com) network in [XBMC](http://xbmc.org/).
 
+![Jupiter Broadcasting Kodi Addon Screenshot](resources/media/screenshot.jpg)
 
 ## Shows
 

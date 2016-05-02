@@ -3,10 +3,14 @@
     id="plugin.video.jupiterbroadcasting"
     name="Jupiter Broadcasting"
 <<<<<<< HEAD
+<<<<<<< HEAD
     version="3.2.4"
 =======
     version="3.2.3"
 >>>>>>> dd2fdd6... 3.2.3
+=======
+    version="3.2.4"
+>>>>>>> 16eb1eb... Update BeautifulSoup to 3.2.1
     provider-name="Rob Loach">
     <requires>
         <import addon="xbmc.python" version="2.1.0" />

@@ -89,6 +89,16 @@ def get_shows():
         'genre': 'Technology'
     }
 
+    # User Error
+    shows[__language__(30024)] = {
+        'feed': 'https://feedpress.me/usererror',
+        'feed-low': 'https://feedpress.me/usererror',
+        'feed-audio': 'https://feedpress.me/usererror',
+        'image': 'usererror.png',
+        'plot': __language__(30224),
+        'genre': 'Technology'
+    }
+
     # FauxShow
     shows[__language__(30011)] = {
         'feed': jupiter + 'feeds/FauxShowHD.xml',

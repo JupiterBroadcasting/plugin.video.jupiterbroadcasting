@@ -1,15 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 [B]Version 3.2.4 May 2nd, 2016[/B]
 - Update BeautifulSoup to 3.2.1
 
-=======
->>>>>>> dd2fdd6... 3.2.3
-=======
-[B]Version 3.2.4 May 2nd, 2016[/B]
-- Update BeautifulSoup to 3.2.1
-
->>>>>>> 16eb1eb... Update BeautifulSoup to 3.2.1
 [B]Version 3.2.3 May 2nd, 2016[/B]
 - Updated documentation to reference Kodi, rather than XBMC
 - Updated default live stream setting to be RTMP

@@ -236,6 +236,10 @@ def categories():
     """
     # List all the shows.
     shows = get_shows()
+
+    #sorts shows by lowercase name
+    sorted_shows = sorted(shows.items(), key=__getKey)
+
     quality = int(__settings__.getSetting("video_quality"))
 
     # Add the Live Stream
@@ -269,7 +273,10 @@ def categories():
 
     # Loop through each of the shows and add them as directories.
     iterator = 2
-    for item_name, data in shows.iteritems():
+    for show in sorted_shows:
+        item_name = show[0]
+        data = show[1]
+
         data['count'] = iterator
         iterator += 1
         # Check whether to use the high or low quality feed.
@@ -284,6 +291,14 @@ def categories():
             'media',
             data['image'])
         add_dir(item_name, feed, 1, data['image'], data)
+
+
+def __getKey(show):
+    """
+    Sets the key for sorting to be the lowercase show name
+    """
+    return show[0].lower()
+
 
 def index(name, url, page):
     """

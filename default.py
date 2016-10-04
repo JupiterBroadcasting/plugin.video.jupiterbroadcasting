@@ -228,6 +228,17 @@ def get_shows():
         'genre': 'Technology'
     }
 
+    # User Error
+    shows[__language__(30024)] = {
+        'feed': 'http://feedpress.me/uevideo',
+        'feed-low': 'http://feedpress.me/usererror',
+        'feed-audio': 'http://feedpress.me/usererror',
+        'image': 'usererror.png',
+        'plot': __language__(30224),
+        'genre': 'Technology'
+        }
+
+
     return shows
 
 def categories():

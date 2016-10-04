@@ -18,6 +18,7 @@ Watch shows from the [Jupiter Broadcasting](http://jupiterbroadcasting.com) netw
 * [TechSNAP](http://www.jupiterbroadcasting.com/show/techsnap/)
 * [Unfilter](http://www.jupiterbroadcasting.com/show/unfilter/)
 * [Women's Tech Radio](http://www.jupiterbroadcasting.com/show/wtr/)
+* [User Error](http://www.jupiterbroadcasting.com/show/error/)
 
 ## Archive
 

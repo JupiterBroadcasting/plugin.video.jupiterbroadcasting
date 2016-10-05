@@ -233,8 +233,21 @@ def get_shows():
         'feed': 'http://feedpress.me/uevideo',
         'feed-low': 'http://feedpress.me/usererror',
         'feed-audio': 'http://feedpress.me/usererror',
+<<<<<<< HEAD
+<<<<<<< HEAD
+        'image': 'usererror.png',
+<<<<<<< HEAD
+        'plot': __language__(30224),
+=======
+=======
+        'image': 'usererror.jpg',
+>>>>>>> 0577d76... Fixed Link to graphic
+        'plot': __language__(30222),
+>>>>>>> f5aabbd... Fixed Graphic, and feed URL
+=======
         'image': 'usererror.png',
         'plot': __language__(30224),
+>>>>>>> 120bb8e... Change UE Graphic to PNG and enlarged
         'genre': 'Technology'
         }
 
@@ -289,11 +302,7 @@ def categories():
             feed = data['feed-low']
         elif quality == 2:
             feed = data['feed-audio']
-        data['image'] = os.path.join(
-            __settings__.getAddonInfo('path'),
-            'resources',
-            'media',
-            data['image'])
+        data['image'] = __get_show_image_path(data)
         add_dir(item_name, feed, 1, data['image'], data)
 
 def index(name, url, page):
@@ -377,6 +386,10 @@ def index(name, url, page):
             mediathumbnail = item.findAll('media:thumbnail')
             if mediathumbnail:
                 thumbnail = mediathumbnail[0]['url']
+            else:
+                # Fall back to episode image
+                shows = get_shows()
+                thumbnail = __get_show_image_path(shows[name])
 
             # Add the episode link.
             add_link(info['title'], video, date, thumbnail, info)
@@ -459,6 +472,18 @@ def add_dir(name, url, mode, iconimage, info, page=0):
         url=uri,
         listitem=liz,
         isFolder=True)
+
+def __get_show_image_path(data):
+    """
+    Returns os path for show image
+    """
+    image_path = os.path.join(
+        __settings__.getAddonInfo('path'),
+        'resources',
+        'media',
+        data['image'])
+
+    return image_path
 
 PARAMS = get_params()
 URL = None

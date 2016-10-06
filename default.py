@@ -228,6 +228,17 @@ def get_shows():
         'genre': 'Technology'
     }
 
+    # User Error
+    shows[__language__(30024)] = {
+        'feed': 'http://feedpress.me/uevideo',
+        'feed-low': 'http://feedpress.me/usererror',
+        'feed-audio': 'http://feedpress.me/usererror',
+        'image': 'usererror.png',
+        'plot': __language__(30224),
+        'genre': 'Technology'
+        }
+
+
     return shows
 
 def categories():
@@ -236,6 +247,10 @@ def categories():
     """
     # List all the shows.
     shows = get_shows()
+
+    #sorts shows by lowercase name
+    sorted_shows = sorted(shows.items(), key=__getKey)
+
     quality = int(__settings__.getSetting("video_quality"))
 
     # Add the Live Stream
@@ -269,7 +284,10 @@ def categories():
 
     # Loop through each of the shows and add them as directories.
     iterator = 2
-    for item_name, data in shows.iteritems():
+    for show in sorted_shows:
+        item_name = show[0]
+        data = show[1]
+
         data['count'] = iterator
         iterator += 1
         # Check whether to use the high or low quality feed.
@@ -278,12 +296,16 @@ def categories():
             feed = data['feed-low']
         elif quality == 2:
             feed = data['feed-audio']
-        data['image'] = os.path.join(
-            __settings__.getAddonInfo('path'),
-            'resources',
-            'media',
-            data['image'])
+        data['image'] = __get_show_image_path(data)
         add_dir(item_name, feed, 1, data['image'], data)
+
+
+def __getKey(show):
+    """
+    Sets the key for sorting to be the lowercase show name
+    """
+    return show[0].lower()
+
 
 def index(name, url, page):
     """
@@ -366,6 +388,10 @@ def index(name, url, page):
             mediathumbnail = item.findAll('media:thumbnail')
             if mediathumbnail:
                 thumbnail = mediathumbnail[0]['url']
+            else:
+                # Fall back to episode image
+                shows = get_shows()
+                thumbnail = __get_show_image_path(shows[name])
 
             # Add the episode link.
             add_link(info['title'], video, date, thumbnail, info)
@@ -448,6 +474,18 @@ def add_dir(name, url, mode, iconimage, info, page=0):
         url=uri,
         listitem=liz,
         isFolder=True)
+
+def __get_show_image_path(data):
+    """
+    Returns os path for show image
+    """
+    image_path = os.path.join(
+        __settings__.getAddonInfo('path'),
+        'resources',
+        'media',
+        data['image'])
+
+    return image_path
 
 PARAMS = get_params()
 URL = None

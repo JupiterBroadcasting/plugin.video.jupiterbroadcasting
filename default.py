@@ -233,21 +233,8 @@ def get_shows():
         'feed': 'http://feedpress.me/uevideo',
         'feed-low': 'http://feedpress.me/usererror',
         'feed-audio': 'http://feedpress.me/usererror',
-<<<<<<< HEAD
-<<<<<<< HEAD
-        'image': 'usererror.png',
-<<<<<<< HEAD
-        'plot': __language__(30224),
-=======
-=======
-        'image': 'usererror.jpg',
->>>>>>> 0577d76... Fixed Link to graphic
-        'plot': __language__(30222),
->>>>>>> f5aabbd... Fixed Graphic, and feed URL
-=======
         'image': 'usererror.png',
         'plot': __language__(30224),
->>>>>>> 120bb8e... Change UE Graphic to PNG and enlarged
         'genre': 'Technology'
         }
 

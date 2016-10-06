@@ -1,3 +1,7 @@
+[B]Version 3.3.0 Unreleased[/B]
+- New Show: User Error
+  - By @Xmetalfanx, @rickyphewitt, and @rikai
+
 [B]Version 3.2.4 May 2nd, 2016[/B]
 - Update BeautifulSoup to 3.2.1
 

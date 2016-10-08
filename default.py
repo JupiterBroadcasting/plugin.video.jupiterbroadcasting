@@ -7,279 +7,28 @@ http://github.com/robloach/plugin.video.jupiterbroadcasting
 import sys, urllib, urllib2, re, xbmcplugin, xbmcgui, xbmcaddon, os
 from BeautifulSoup import BeautifulStoneSoup
 
+# local imports
+import jb_shows
+
 __settings__ = xbmcaddon.Addon(id='plugin.video.jupiterbroadcasting')
 __language__ = __settings__.getLocalizedString
-
-def get_shows():
-    """
-    List of available Jupiter Broadcasting shows.
-    """
-    shows = {}
-    feedburner = 'http://feeds2.feedburner.com/'
-    jupiter = 'http://www.jupiterbroadcasting.com/'
-
-    # All Shows
-    shows[__language__(30006)] = {
-        'feed': feedburner + 'AllJupiterVideos?format=xml',
-        'feed-low': feedburner + 'AllJupiterVideos?format=xml',
-        'feed-audio': feedburner + '/AllJupiterBroadcastingShowsOgg?format=xml',
-        'image': 'most-recent.jpg',
-        'plot': __language__(30206),
-        'genre': 'Technology',
-        'archived': False,
-        'count': 0
-    }
-
-    # Linux Action Show
-    shows[__language__(30000)] = {
-        'feed': feedburner + 'linuxashd?format=xml',
-        'feed-low': feedburner + 'linuxactionshowipodvid?format=xml',
-        'feed-audio': feedburner + 'TheLinuxActionShowOGG?format=xml',
-        'image': 'linux-action-show.jpg',
-        'plot': __language__(30200),
-        'genre': 'Technology',
-        'archived': False
-    }
-
-    # STOked
-    shows[__language__(30002)] = {
-        'feed': feedburner + 'stokedhd?format=xml',
-        'feed-low': feedburner + 'stokedipod?format=xml',
-        'feed-audio': feedburner + 'stoked-ogg?format=xml',
-        'image':'stoked.png',
-        'plot': __language__(30202),
-        'genre': 'Technology',
-        'archived': True
-    }
-
-    # TechSnap
-    shows[__language__(30008)] = {
-        'feed': feedburner + 'techsnaphd?format=xml',
-        'feed-low': feedburner + 'techsnapmobile?format=xml',
-        'feed-audio': feedburner + 'techsnapogg?format=xml',
-        'image': 'techsnap.jpg',
-        'plot': __language__(30208),
-        'genre': 'Technology',
-        'archived': False
-    }
-
-    # SCIbyte
-    shows[__language__(30009)] = {
-        'feed': feedburner + 'scibytehd?format=xml',
-        'feed-low': feedburner + 'scibytemobile?format=xml',
-        'feed-audio': feedburner + 'scibyteaudio?format=xml',
-        'image': 'scibyte.jpg',
-        'plot': __language__(30209),
-        'genre': 'Science',
-        'archived': False
-    }
-
-    # In Depth Look
-    shows[__language__(30014)] = {
-        'feed': jupiter + 'feeds/indepthlookihd.xml',
-        'feed-low': jupiter + 'feeds/indepthlookmob.xml',
-        'feed-audio': jupiter + 'feeds/indepthlookmp3.xml?format=xml',
-        'image': 'in-depth-look.jpg',
-        'plot': __language__(30214),
-        'genre': 'Technology',
-        'archived': True
-    }
-
-    # Unfilter
-    shows[__language__(30016)] = {
-        'feed': jupiter + 'feeds/unfilterHD.xml',
-        'feed-low': jupiter + 'feeds/unfilterMob.xml',
-        'feed-audio': jupiter + 'feeds/unfilterogg.xml',
-        'image': 'unfilter.jpg',
-        'plot': __language__(30216),
-        'genre': 'Technology',
-        'archived': False
-    }
-
-    # FauxShow
-    shows[__language__(30011)] = {
-        'feed': jupiter + 'feeds/FauxShowHD.xml',
-        'feed-low': jupiter + 'feeds/FauxShowMobile.xml',
-        'feed-audio': jupiter + 'feeds/FauxShowMP3.xml',
-        'image': 'faux-show.jpg',
-        'plot': __language__(30211),
-        'genre': 'Comedy',
-        'archived': False
-    }
-
-    # Jupiter@Nite
-    shows[__language__(30004)] = {
-        'feed': feedburner + 'jupiternitehd?format=xml',
-        'feed-low': feedburner + 'jupiternitelargevid?format=xml',
-        'feed-audio': feedburner + 'jupiternitemp3?format=xml',
-        'image': 'jupiter-at-nite.jpg',
-        'plot': __language__(30204),
-        'genre': 'Technology',
-        'archived': True
-    }
-
-    # MMOrgue
-    shows[__language__(30007)] = {
-        'feed': feedburner + 'MMOrgueHD?format=xml',
-        'feed-low': feedburner + 'MMOrgueHD?format=xml',
-        'feed-audio': jupiter + 'feeds/AllJupiterBroadcastingShowsOGG.xml',
-        'image': 'mmorgue.jpg',
-        'plot': __language__(30207),
-        'genre': 'Technology',
-        'archived': True
-    }
-
-    # LOTSO
-    shows[__language__(30003)] = {
-        'feed': feedburner + 'lotsovideo?format=xml',
-        'feed-low': feedburner + 'lotsovideo?format=xml',
-        'feed-audio': feedburner + 'lotsomp3?format=xml',
-        'image': 'lotso.jpg',
-        'plot': __language__(30203),
-        'genre': 'Technology',
-        'archived': True
-    }
-
-    # Beer is Tasty
-    shows[__language__(30001)] = {
-        'feed': feedburner + 'jupiterbeeristasty-hd?format=xml',
-        'feed-low': feedburner + 'BeerIsTasty?format=xml',
-        'feed-audio': feedburner + 'BeerIsTasty?format=xml',
-        'image': 'beer-is-tasty.png',
-        'plot': __language__(30201),
-        'genre': 'Technology',
-        'archived': True
-    }
-
-    # Jupiter Files
-    shows[__language__(30005)] = {
-        'feed': feedburner + 'ldf-video?format=xml',
-        'feed-low': feedburner + 'ldf-video?format=xml',
-        'feed-audio': feedburner + 'ldf-mp3?format=xml',
-        'image': 'jupiter-files.jpg',
-        'plot': __language__(30205),
-        'genre': 'Technology',
-        'archived': True
-    }
-
-    # TORked
-    shows[__language__(30015)] = {
-        'feed': feedburner + 'TorkedHd?format=xml',
-        'feed-low': feedburner + 'TorkedMobile?format=xml',
-        'feed-audio': feedburner + 'TorkedMp3?format=xml',
-        'image': 'torked.jpg',
-        'plot': __language__(30215),
-        'genre': 'Technology',
-        'archived': True
-    }
-
-    # Coder Radio
-    shows[__language__(30017)] = {
-        'feed': feedburner + 'coderradiovideo?format=xml',
-        'feed-low': jupiter + 'feeds/coderradioogg.xml?format=xml',
-        'feed-audio': jupiter + 'feeds/coderradioogg.xml',
-        'image': 'coder-radio.jpg',
-        'plot': __language__(30217),
-        'genre': 'Technology',
-        'archived': False
-    }
-
-    # Plan B
-    shows[__language__(30018)] = {
-        'feed': feedburner + 'PlanBVideo?format=xml',
-        'feed-low': feedburner + 'planbogg?format=xml',
-        'feed-audio': feedburner + 'planbogg?format=xml',
-        'image': 'planb.jpg',
-        'plot': __language__(30218),
-        'genre': 'Technology',
-        'archived': False
-    }
-
-    # Linux Unplugged
-    shows[__language__(30019)] = {
-        'feed': feedburner + 'linuxunvid?format=xml',
-        'feed-low': feedburner + 'linuxunogg?format=xml',
-        'feed-audio': feedburner + 'linuxunogg?format=xml',
-        'image': 'linux-unplugged.jpg',
-        'plot': __language__(30219),
-        'genre': 'Technology',
-        'archived': False
-    }
-
-    # BSD Now
-    shows[__language__(30020)] = {
-        'feed': feedburner + 'BsdNowHd?format=xml',
-        'feed-low': feedburner + 'BsdNowMobile?format=xml',
-        'feed-audio': feedburner + 'BsdNowOgg?format=xml',
-        'image': 'bsd-now.jpg',
-        'plot': __language__(30220),
-        'genre': 'Technology',
-        'archived': False
-    }
-    # HowTo Linux
-    shows[__language__(30021)] = {
-        'feed': feedburner + 'HowtoLinuxHd?format=xml',
-        'feed-low': feedburner + 'HowtoLinuxMobile?format=xml',
-        'feed-audio': feedburner + 'HowtoLinuxOgg?format=xml',
-        'image': 'howto-linux.jpg',
-        'plot': __language__(30221),
-        'genre': 'Technology',
-        'archived': True
-    }
-
-    # Tech Talk Today
-    shows[__language__(30022)] = {
-        'feed': 'http://feedpress.me/t3mob',
-        'feed-low': 'http://feedpress.me/t3ogg',
-        'feed-audio': 'http://feedpress.me/t3ogg',
-        'image': 'tech-talk-today.png',
-        'plot': __language__(30222),
-        'genre': 'Technology',
-        'archived': False
-    }
-
-    # Women's Tech Radio
-    shows[__language__(30023)] = {
-        'feed': feedburner + 'wtrmobile?format=xml',
-        'feed-low': feedburner + 'wtrogg?format=xml',
-        'feed-audio': feedburner + 'wtrmp3?format=xml',
-        'image': 'womens-tech-radio.png',
-        'plot': __language__(30223),
-        'genre': 'Technology',
-        'archived': False
-    }
-
-    # Meta Archive show
-    shows[__language__(30025)] = {
-        'image': 'icon.png',
-        'plot': __language__(30225),
-        'genre': 'Technology',
-        'archived': False
-    }
-
-    # User Error
-    shows[__language__(30024)] = {
-        'feed': 'http://feedpress.me/uevideo',
-        'feed-low': 'http://feedpress.me/usererror',
-        'feed-audio': 'http://feedpress.me/usererror',
-        'image': 'usererror.png',
-        'plot': __language__(30224),
-        'genre': 'Technology',
-        'archived': False
-        }
-
-
-    return shows
 
 def categories(show_archived=False):
     """
     Load the available categories for Jupiter Broadcasting.
     """
-    # List all the shows.
-    shows = get_shows()
 
-    #sorts shows by lowercase name
-    sorted_shows = sorted(shows.items(), key=__getKey)
+    shows = {}
+    # get shows
+    if show_archived:
+        shows = jb_shows.get_archived_shows()
+    else:
+        shows = jb_shows.get_active_shows()
+
+    # translate shows
+    shows = translate_shows(__language__, shows)
+    sorted_shows = jb_shows.sort_shows(shows)
+
 
     quality = int(__settings__.getSetting("video_quality"))
 
@@ -303,7 +52,7 @@ def categories(show_archived=False):
         iterator += 1
 
         # check if show is meta archive show
-        if item_name == __language__(30025):
+        if item_name == 'Archive':
             add_archive(item_name, data)
             continue
 
@@ -318,11 +67,18 @@ def categories(show_archived=False):
         add_dir(item_name, feed, 1, data['image'], data)
 
 
-def __getKey(show):
+
+
+def translate_shows(__language__, untranslated_shows):
     """
-    Sets the key for sorting to be the lowercase show name
+    Takes the raw show input and translates the name and plot
     """
-    return show[0].lower()
+    translated_shows = {}
+    for show_name, data in untranslated_shows.items():
+        data['plot'] = __language__(data['plot'])
+        translated_shows[__language__(show_name)] = data
+
+    return translated_shows
 
 
 def index(name, url, page):
@@ -406,9 +162,9 @@ def index(name, url, page):
             mediathumbnail = item.findAll('media:thumbnail')
             if mediathumbnail:
                 thumbnail = mediathumbnail[0]['url']
-            elif name != __language__(30300):
+            elif name != __language__(30025) and name != __language__(30300):
                 # Fall back to episode image
-                shows = get_shows()
+                shows = translate_shows(__language__, jb_shows.get_all_shows())
                 thumbnail = __get_show_image_path(shows[name])
 
             # Add the episode link.

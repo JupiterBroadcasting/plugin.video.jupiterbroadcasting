@@ -44,14 +44,29 @@ Watch shows from the [Jupiter Broadcasting](http://jupiterbroadcasting.com) netw
 
 ### Environment
 
+* Clone plugin into Kodi Addons folder, this is sufficient for use/testing
 ```bash
 $ cd ~/.kodi/addons/
 $ git clone git@github.com:RobLoach/plugin.video.jupiterbroadcasting.git
 ```
+* Setup development environment
+```bash
+$ make venv
+$ source venv/bin/activate
+```
+* Run unit tests
+```bash
+$ make tests
+```
+* Exit virtual env
+```bash
+$ deactivate
+```
+
 
 ### Tools
 
-* [Google Python Style Guide](http://google-styleguide.googlecode.com/svn/trunk/pyguide.html) for consistent styles
+* [Google Python Style Guide](https://google.github.io/styleguide/pyguide.html) for consistent styles
 * [Pylint](http://pylint.org)
 
 

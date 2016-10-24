@@ -43,7 +43,7 @@ Watch shows from the [Jupiter Broadcasting](http://jupiterbroadcasting.com) netw
 ## Development
 
 ### Environment
-
+* Requires make, python pip, and virtualenv
 * Clone plugin into Kodi Addons folder, this is sufficient for use/testing
 ```bash
 $ cd ~/.kodi/addons/

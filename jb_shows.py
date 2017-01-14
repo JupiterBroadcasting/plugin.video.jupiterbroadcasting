@@ -308,7 +308,6 @@ def _shows():
         'archived': False
         }
 
-
     return shows
 
 def _sort_key(show):

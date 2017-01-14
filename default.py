@@ -9,6 +9,7 @@ from BeautifulSoup import BeautifulStoneSoup
 
 # local imports
 import jb_shows
+from feed_parser import FeedParser
 
 __settings__ = xbmcaddon.Addon(id='plugin.video.jupiterbroadcasting')
 __language__ = __settings__.getLocalizedString
@@ -85,92 +86,57 @@ def index(name, url, page):
     """
     Presents a list of episodes within the given index page.
     """
-    # Load the XML feed.
-    data = urllib2.urlopen(url)
 
-    # Parse the data with BeautifulStoneSoup, noting any self-closing tags.
-    soup = BeautifulStoneSoup(
-        data,
-        convertEntities=BeautifulStoneSoup.XML_ENTITIES,
-        selfClosingTags=['media:thumbnail', 'enclosure', 'media:content'])
-    count = 1
+    episodes_per_page = int(float(__settings__.getSetting('episodes_per_page')))
 
-    # Figure out where to start and where to stop the pagination.
-    episodesperpage = int(float(__settings__.getSetting('episodes_per_page')))
-    start = episodesperpage * int(page)
-    currentindex = 0
+    # Load feed and required info to figure out where
+    # to start and where to stop the pagination.
+    feedParser = FeedParser(name, url, episodes_per_page, page)
+    # Load/Parse the XML feed.
+    feedParser.parseXML()
 
     # Wrap in a try/catch to protect from broken RSS feeds.
     try:
-        for item in soup.findAll('item'):
-            # Set up the pagination properly.
-            currentindex += 1
-            if currentindex < start:
+        for item in feedParser.getItems():
+
+            # Determine if item should be added based on
+            # page number and episodesPerPage
+            if feedParser.isItemBeforeCurrentPage():
                 # Skip this episode since it's before the page starts.
+                feedParser.nextItem()
                 continue
-            if currentindex >= start + episodesperpage:
-                # Add a go to next page link, and skip the rest of the loop.
-                next_image = os.path.join(
-                    __settings__.getAddonInfo('path'),
-                    'resources',
-                    'media',
-                    'next.png')
-                add_dir(
-                    name=__language__(30300),
-                    url=url,
-                    mode=1,
-                    iconimage=next_image,
-                    info={},
-                    page=page + 1)
+            if feedParser.isPageEnd():
+                create_next_page_entry(__language__(30300), url, 1, page)
                 break
 
             # Load up the initial episode information.
             info = {}
-            title = item.find('title')
-            info['title'] = str(currentindex) + '. '
-            if title:
-                info['title'] += title.string
+            info['title'] = feedParser.parseTitle(item)
             info['tvshowtitle'] = name
-            info['count'] = count
-            count += 1 # Increment the show count.
+            info['count'] = feedParser.getCurrentFeedItem()
+            info['size'] = feedParser.parseVideoSize(item)
+            video = feedParser.parseVideo(item)
+            pubDate = feedParser.parsePubDate(item)
+            info['plotoutline'] = feedParser.parsePlotOutline(item)
+            info['plot'] = feedParser.parsePlot(item)
+            info['director'] = feedParser.parseAuthor(item)
+            thumbnail = feedParser.parseThumbnail(item)
 
-            # Get the video enclosure.
-            video = get_item_video(item, info)
-
-            # Find the Date
-            date = ''
-            pubdate = item.find('pubDate')
-            if pubdate != None:
-                date = pubdate.string
-                # strftime("%d.%m.%Y", item.updated_parsed)
-
-            # Plot outline.
-            summary = item.find('itunes:summary')
-            if summary != None:
-                info['plot'] = info['plotoutline'] = summary.string.strip()
-
-            # Plot.
-            get_item_description(item, info)
-
-            # Author/Director.
-            author = item.find('itunes:author')
-            if author != None:
-                info['director'] = author.string
-
-            # Load the self-closing media:thumbnail data.
-            thumbnail = ''
-            mediathumbnail = item.findAll('media:thumbnail')
-            if mediathumbnail:
-                thumbnail = mediathumbnail[0]['url']
-            elif name != __language__(30025) and name != __language__(30300):
+            # Get default thumb if needed except for archive/older episodes
+            if thumbnail == None and name != __language__(30025) and name != __language__(30300):
                 # Fall back to episode image
                 shows = translate_shows(__language__, jb_shows.get_all_shows())
                 thumbnail = __get_show_image_path(shows[name])
 
+            # Increment the show count.
+            feedParser.nextItem()
+
             # Add the episode link.
-            add_link(info['title'], video, date, thumbnail, info)
-    except:
-        pass
+            add_link(info['title'], video, pubDate, thumbnail, info)
+    except Exception as e:
+        print 'Exception Parsing Feed! Please provide this log to https://github.com/RobLoach/plugin.video.jupiterbroadcasting'
+        raise
+
     xbmcplugin.setContent(int(sys.argv[1]), 'episodes')
     xbmcplugin.endOfDirectory(int(sys.argv[1]))
 
@@ -218,27 +184,15 @@ def add_archive(name, info):
         listitem=liz,
         isFolder=True)
 
-def get_item_description(item, info):
-    description = item.find('description')
-    if description != None:
-        # Attempt to strip the HTML tags.
-        try:
-            info['plot'] = re.sub(r'<[^>]*?>', '', description.string)
-        except:
-            info['plot'] = description.string
+def create_next_page_entry(name, url, mode, page):
 
-def get_item_video(item, info):
-    enclosure = item.find('enclosure')
-    if enclosure != None:
-        video = enclosure.get('href')
-        if video == None:
-            video = enclosure.get('url')
-        if video == None:
-            video = ''
-        size = enclosure.get('length')
-        if size != None:
-            info['size'] = int(size)
-    return video
+    next_image = os.path.join(
+        __settings__.getAddonInfo('path'),
+        'resources',
+        'media',
+        'next.png')
+
+    add_dir(name, url, mode, next_image, {}, page+1)
 
 def get_params():
     """

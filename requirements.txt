@@ -1,5 +1,2 @@
 urllib3
-#xbmcplugin
-#xbmcgui
-#xbmcaddon
 BeautifulSoup

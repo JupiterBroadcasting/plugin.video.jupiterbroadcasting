@@ -155,7 +155,7 @@ def _feed_data():
         'video': 'http://www.podtrac.com/pts/redirect.mp4/201406.jb-dl.cdn.scaleengine.net/bsdnow/2016/bsd-0174.mp4',
         'pubDate': 'Thu, 29 Dec 2016 10:30:24 -0800',
         'summary': 'Chris takes over and guest hosts the show to give the guys some time off.\n\nWe take a look back at 2016 in BSD, covering the announcement of TrueOS, OpenBSD and FreeBSD releases, a talk with Petra about NetBSD & much more!',
-        'description': '<p>Chris takes over and guest hosts the show to give the guys some time off.</p>\n\n<p>We take a look back at 2016 in BSD, covering the announcement of TrueOS, OpenBSD and FreeBSD releases, a talk with Petra about NetBSD & much more!</p>',
+        'description': 'Chris takes over and guest hosts the show to give the guys some time off.\n\nWe take a look back at 2016 in BSD, covering the announcement of TrueOS, OpenBSD and FreeBSD releases, a talk with Petra about NetBSD & much more!',
         'director': 'Jupiter Broadcasting',
         'thumbnail': 'http://www.jupiterbroadcasting.com/wp-content/uploads/2016/12/bsd-0174v2-v.jpg'
     }

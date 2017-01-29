@@ -6,6 +6,9 @@ Handles parsing of XML feeds
 import urllib, urllib2
 from BeautifulSoup import BeautifulStoneSoup
 
+# local imports
+import ml_stripper
+
 class FeedParser(object):
 
     def __init__ (self, show_name, feed_url, episodes_per_page, current_page):
@@ -84,19 +87,16 @@ class FeedParser(object):
         plot_outline = ''
         summary = item.find('itunes:summary')
         if summary != None:
-            plot_outline = summary.string
+            plot_outline = ml_stripper.html_to_text(summary.string)
         return plot_outline
 
     def parsePlot(self, item):
         plot = ''
         description = item.find('description')
         if description != None:
-            # Attempt to strip the HTML tags.
-            try:
-                # @ToDo add better html parsing
-                plot = re.sub(r'<[^>]*?>', '', description.string)
-            except:
-                plot = description.string
+            # strip html from string
+            plot = ml_stripper.html_to_text(description.string)
+
         return plot
 
     def parseAuthor(self, item):

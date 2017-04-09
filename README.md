@@ -7,6 +7,7 @@ Watch shows from the [Jupiter Broadcasting](http://jupiterbroadcasting.com) netw
 ## Shows
 
 * [JBLive.TV](http://jblive.tv)
+* [Ask Noah](http://www.jupiterbroadcasting.com/show/asknoah/)
 * [BSD Now](http://www.jupiterbroadcasting.com/show/bsdnow/)
 * [Coder Radio](http://www.jupiterbroadcasting.com/show/coderradio/)
 * [FauxShow](http://www.jupiterbroadcasting.com/show/fauxshow/)

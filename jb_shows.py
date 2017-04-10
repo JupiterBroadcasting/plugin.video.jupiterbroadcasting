@@ -308,6 +308,17 @@ def _shows():
         'archived': False
         }
 
+    # Ask Noah
+    shows[30026] = {
+        'feed': 'http://feedpress.me/AskNoahHD',
+        'feed-low': 'http://feedpress.me/AskNoahHD',
+        'feed-audio': 'https://asknoah.fireside.fm/rss',
+        'image': 'asknoah.png',
+        'plot': 30226,
+        'genre': 'Technology',
+        'archived': False
+        }
+
     return shows
 
 def _sort_key(show):

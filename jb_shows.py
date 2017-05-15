@@ -319,6 +319,17 @@ def _shows():
         'archived': False
         }
 
+    # Linux Action News
+    shows[30027] = {
+        'feed': 'http://linuxactionnews.com/rss',
+        'feed-low': 'http://linuxactionnews.com/rss',
+        'feed-audio': 'https://linuxactionnews.fireside.fm/rss',
+        'image': 'linux-action-news.jpg',
+        'plot': 30227,
+        'genre': 'Technology',
+        'archived': False
+        }
+
     return shows
 
 def _sort_key(show):

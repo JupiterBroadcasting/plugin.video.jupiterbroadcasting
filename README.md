@@ -11,6 +11,7 @@ Watch shows from the [Jupiter Broadcasting](http://jupiterbroadcasting.com) netw
 * [BSD Now](http://www.jupiterbroadcasting.com/show/bsdnow/)
 * [Coder Radio](http://www.jupiterbroadcasting.com/show/coderradio/)
 * [FauxShow](http://www.jupiterbroadcasting.com/show/fauxshow/)
+* [Linux Action News](http://linuxactionnews.com)
 * [Linux Action Show](http://www.jupiterbroadcasting.com/show/linuxactionshow/)
 * [Linux Unplugged](http://www.jupiterbroadcasting.com/show/linuxun/)
 * [Plan B](http://www.jupiterbroadcasting.com/show/planb/)

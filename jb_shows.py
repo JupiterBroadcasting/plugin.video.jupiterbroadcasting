@@ -78,7 +78,7 @@ def _shows():
         'image': 'linux-action-show.jpg',
         'plot': 30200,
         'genre': 'Technology',
-        'archived': False
+        'archived': True
     }
 
     # STOked
@@ -111,7 +111,7 @@ def _shows():
         'image': 'scibyte.jpg',
         'plot': 30209,
         'genre': 'Science',
-        'archived': False
+        'archived': True 
     }
 
     # In Depth Look
@@ -144,7 +144,7 @@ def _shows():
         'image': 'faux-show.jpg',
         'plot': 30211,
         'genre': 'Comedy',
-        'archived': False
+        'archived': True
     }
 
     # Jupiter@Nite
@@ -232,7 +232,7 @@ def _shows():
         'image': 'planb.jpg',
         'plot': 30218,
         'genre': 'Technology',
-        'archived': False
+        'archived': True
     }
 
     # Linux Unplugged
@@ -256,6 +256,7 @@ def _shows():
         'genre': 'Technology',
         'archived': False
     }
+    
     # HowTo Linux
     shows[30021] = {
         'feed': FEED_BURNER + 'HowtoLinuxHd?format=xml',
@@ -275,7 +276,7 @@ def _shows():
         'image': 'tech-talk-today.png',
         'plot': 30222,
         'genre': 'Technology',
-        'archived': False
+        'archived': True
     }
 
     # Women's Tech Radio
@@ -286,7 +287,7 @@ def _shows():
         'image': 'womens-tech-radio.png',
         'plot': 30223,
         'genre': 'Technology',
-        'archived': False
+        'archived': True
     }
 
     # Meta Archive show

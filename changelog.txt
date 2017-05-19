@@ -1,4 +1,4 @@
-[B]Version x.x.x Unreleased[/B]
+[B]Version 3.4.0 May 19th, 2017[/B]
 - Added a FeedParser class to help in parsing the RSS feeds
   - By @rickyphewitt
 - Added Ask Noah Show

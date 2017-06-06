@@ -12,30 +12,29 @@ Watch shows from the [Jupiter Broadcasting](http://jupiterbroadcasting.com) netw
 * [Ask Noah](http://www.jupiterbroadcasting.com/show/asknoah/)
 * [BSD Now](http://www.jupiterbroadcasting.com/show/bsdnow/)
 * [Coder Radio](http://www.jupiterbroadcasting.com/show/coderradio/)
-* [FauxShow](http://www.jupiterbroadcasting.com/show/fauxshow/)
 * [Linux Action News](http://linuxactionnews.com)
-* [Linux Action Show](http://www.jupiterbroadcasting.com/show/linuxactionshow/)
 * [Linux Unplugged](http://www.jupiterbroadcasting.com/show/linuxun/)
-* [Plan B](http://www.jupiterbroadcasting.com/show/planb/)
-* [SciByte](http://www.jupiterbroadcasting.com/show/scibyte/)
-* [Tech Talk Today](http://www.jupiterbroadcasting.com/show/today/)
 * [TechSNAP](http://www.jupiterbroadcasting.com/show/techsnap/)
 * [Unfilter](http://www.jupiterbroadcasting.com/show/unfilter/)
-* [Women's Tech Radio](http://www.jupiterbroadcasting.com/show/wtr/)
 * [User Error](http://www.jupiterbroadcasting.com/show/error/)
 
 ## Archive
 
 * [Beer Is Tasty](http://www.jupiterbroadcasting.com/show/beeristasty/)
+* [FauxShow](http://www.jupiterbroadcasting.com/show/fauxshow/)
 * [HowTo Linux](http://www.jupiterbroadcasting.com/show/h2l/)
 * [In Depth Look](http://www.jupiterbroadcasting.com/show/indepthlook/)
 * [Jupiter Files](http://www.jupiterbroadcasting.com/?s=%22jupiter+files%22)
 * [Jupiter@Nite](http://www.jupiterbroadcasting.com/show/nite/)
+* [Linux Action Show](http://www.jupiterbroadcasting.com/show/linuxactionshow/)
 * [LOTSO](http://www.jupiterbroadcasting.com/show/legend-of-the-stoned-owl/)
 * [MMOrgue](http://www.jupiterbroadcasting.com/show/mmorgue/)
+* [Plan B](http://www.jupiterbroadcasting.com/show/planb/)
+* [SciByte](http://www.jupiterbroadcasting.com/show/scibyte/)
 * [STOked](http://www.jupiterbroadcasting.com/show/stoked/)
+* [Tech Talk Today](http://www.jupiterbroadcasting.com/show/today/)
 * [TORked](http://www.jupiterbroadcasting.com/show/torked/)
-
+* [Women's Tech Radio](http://www.jupiterbroadcasting.com/show/wtr/)
 
 ## Install
 

@@ -4,6 +4,7 @@ Test Feed Parser
 import sys
 import os
 import unittest
+import mock
 
 # local imports
 from feed_parser import FeedParser
@@ -16,10 +17,29 @@ class TestFeedParser(unittest.TestCase):
     """
 
 
+    # mock request call and just read the file
+    def mocked_requests_get(*args, **kwargs):
+        class MockResponse:
+            def __init__(self, text, status_code):
+                self.status_code = status_code
+                self.text = text
+
+        # current working dir
+        cwd = os.getcwd()
+
+        if args[0] == 'BsdNow.single.item.xml':
+            return MockResponse(open(cwd + '/tests/resources/feeds/feedburner.BsdNow.single.item.xml', 'r').read(), 200)
+        elif args[0] == 'BsdNow.12.31.2016.xml':
+            return MockResponse(open(cwd + '/tests/resources/feeds/feedburner.BsdNow.12.31.2016.xml', 'r').read(), 200)
+
+        return MockResponse(None, 404)
+
+    # Test code
     def setUp(self):
         pass
 
-    def test_feed_burner_parsing_single_item(self):
+    @mock.patch('requests.get', side_effect=mocked_requests_get)
+    def test_feed_burner_parsing_single_item(self, mock_requests):
         """
         Using a static feedburner xml feed
         verifies expected outcome of shows/pagnation
@@ -46,7 +66,8 @@ class TestFeedParser(unittest.TestCase):
             self.assertEquals(feeds['feed_burner_single_item']['director'],  feedParser.parseAuthor(item))
             self.assertEquals(feeds['feed_burner_single_item']['thumbnail'],  feedParser.parseThumbnail(item))
 
-    def test_page_1_feed_burner_pagination_25_per_page(self):
+    @mock.patch('requests.get', side_effect=mocked_requests_get)
+    def test_page_1_feed_burner_pagination_25_per_page(self, mock_requests):
         """
         Using a static feedburner xml verify
         pagination - page 1
@@ -65,11 +86,13 @@ class TestFeedParser(unittest.TestCase):
         self.assertEquals(countInfo['itemCount'], episodes_per_page)
         self.assertEquals(countInfo['endOfPageCount'], 1)
 
-    def test_page_2_feed_burner_pagination_13_per_page(self):
+    @mock.patch('requests.get', side_effect=mocked_requests_get)
+    def test_page_2_feed_burner_pagination_13_per_page(self, mock_requests):
         """
         Using a static feedburner xml verify
         pagination - page 2
         """
+
         feeds = _feed_data()
         page = 1
         episodes_per_page = 13
@@ -130,13 +153,12 @@ def _feed_data():
     """
     Add feed data here for validation
     """
-    # current working dir
-    cwd = os.getcwd()
+
     feeds = {}
 
     # Feeds
     feeds['feed_burner_pagination_25'] = {
-        'url': 'file://' + cwd + '/tests/resources/feeds/feedburner.BsdNow.12.31.2016.xml',
+        'url': 'BsdNow.12.31.2016.xml',
         'episodes': 174,
         12: '12. Return of the Cantrill | BSD Now 163',
         25: '25. Sprinkle A Little BSD Into Your Life | BSD Now 150',
@@ -148,7 +170,7 @@ def _feed_data():
     }
 
     feeds['feed_burner_single_item'] = {
-        'url': 'file://' + cwd + '/tests/resources/feeds/feedburner.BsdNow.single.item.xml',
+        'url': 'BsdNow.single.item.xml',
         'episodes': 1,
         'title' : '1. 2016 highlights | BSD Now 174',
         'size': 1186106641,
@@ -161,3 +183,6 @@ def _feed_data():
     }
 
     return feeds
+
+
+

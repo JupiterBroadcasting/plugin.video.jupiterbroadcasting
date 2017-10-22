@@ -3,7 +3,7 @@ Feed Parser Class
 Handles parsing of XML feeds
 """
 
-import urllib, urllib2
+import requests
 from BeautifulSoup import BeautifulStoneSoup
 
 # local imports
@@ -36,7 +36,7 @@ class FeedParser(object):
         """
         Loads the XML Feed
         """
-        return urllib2.urlopen(self.feed_url)
+        return requests.get(self.feed_url).text
 
     def _parseWithSoup(self, data):
         """

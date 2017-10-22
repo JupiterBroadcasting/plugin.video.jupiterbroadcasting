@@ -1,2 +1,2 @@
-urllib3
+requests
 BeautifulSoup

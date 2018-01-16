@@ -1,4 +1,7 @@
 [B]Version x.x.x Xxxxx xxxx, xxxx[/B]
+- Upgraded to requests over urllib/urllib2
+- Updated audio feeds of active shows
+  - By @rickyphewitt
 - Move inactive shows to Archive
   - By @Xmetalfanx
 

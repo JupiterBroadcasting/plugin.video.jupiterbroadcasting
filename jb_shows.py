@@ -63,7 +63,7 @@ def _shows():
     shows[30006] = {
         'feed': FEED_BURNER + 'AllJupiterVideos?format=xml',
         'feed-low': FEED_BURNER + 'AllJupiterVideos?format=xml',
-        'feed-audio': FEED_BURNER + '/AllJupiterBroadcastingShowsOgg?format=xml',
+        'feed-audio': FEED_BURNER + '/JupiterBroadcasting?format=xml',
         'image': 'most-recent.jpg',
         'plot': 30206,
         'genre': 'Technology',
@@ -130,7 +130,7 @@ def _shows():
     shows[30016] = {
         'feed': JUPITER_COM + 'feeds/unfilterHD.xml',
         'feed-low': JUPITER_COM + 'feeds/unfilterMob.xml',
-        'feed-audio': JUPITER_COM + 'feeds/unfilterogg.xml',
+        'feed-audio': JUPITER_COM + 'feeds/unfilterMP3.xml',
         'image': 'unfilter.jpg',
         'plot': 30216,
         'genre': 'Technology',
@@ -217,8 +217,8 @@ def _shows():
     # Coder Radio
     shows[30017] = {
         'feed': FEED_BURNER + 'coderradiovideo?format=xml',
-        'feed-low': JUPITER_COM + 'feeds/coderradioogg.xml?format=xml',
-        'feed-audio': JUPITER_COM + 'feeds/coderradioogg.xml',
+        'feed-low': FEED_BURNER + 'coderradiomp3?format=xml',
+        'feed-audio': FEED_BURNER + 'coderradiomp3?format=xml',
         'image': 'coder-radio.jpg',
         'plot': 30217,
         'genre': 'Technology',
@@ -239,8 +239,8 @@ def _shows():
     # Linux Unplugged
     shows[30019] = {
         'feed': FEED_BURNER + 'linuxunvid?format=xml',
-        'feed-low': FEED_BURNER + 'linuxunogg?format=xml',
-        'feed-audio': FEED_BURNER + 'linuxunogg?format=xml',
+        'feed-low': FEED_BURNER + 'linuxunplugged?format=xml',
+        'feed-audio': FEED_BURNER + 'linuxunplugged?format=xml',
         'image': 'linux-unplugged.jpg',
         'plot': 30219,
         'genre': 'Technology',
@@ -251,7 +251,7 @@ def _shows():
     shows[30020] = {
         'feed': FEED_BURNER + 'BsdNowHd?format=xml',
         'feed-low': FEED_BURNER + 'BsdNowMobile?format=xml',
-        'feed-audio': FEED_BURNER + 'BsdNowOgg?format=xml',
+        'feed-audio': FEED_BURNER + 'BsdNowMp3?format=xml',
         'image': 'bsd-now.jpg',
         'plot': 30220,
         'genre': 'Technology',

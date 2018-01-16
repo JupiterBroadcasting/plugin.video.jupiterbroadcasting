@@ -5,6 +5,7 @@ Contains shows/feeds/helper methods
 
 # list of jb shows
 FEED_BURNER = 'http://feeds2.feedburner.com/'
+FEED_PRESS = 'http://feedpress.me/'
 JUPITER_COM = 'http://www.jupiterbroadcasting.com/'
 
 
@@ -94,9 +95,9 @@ def _shows():
 
     # TechSnap
     shows[30008] = {
-        'feed': FEED_BURNER + 'techsnaphd?format=xml',
-        'feed-low': FEED_BURNER + 'techsnapmobile?format=xml',
-        'feed-audio': FEED_BURNER + 'techsnapmp3?format=xml',
+        'feed': FEED_PRESS + 'techsnapvid',
+        'feed-low': FEED_PRESS + 'techsnapvid',
+        'feed-audio': 'http://techsnap.systems/rss',
         'image': 'techsnap.jpg',
         'plot': 30208,
         'genre': 'Technology',
@@ -270,9 +271,9 @@ def _shows():
 
     # Tech Talk Today
     shows[30022] = {
-        'feed': 'http://feedpress.me/t3mob',
-        'feed-low': 'http://feedpress.me/t3ogg',
-        'feed-audio': 'http://feedpress.me/t3ogg',
+        'feed': FEED_PRESS + 't3mob',
+        'feed-low': FEED_PRESS + 't3ogg',
+        'feed-audio': FEED_PRESS + 't3ogg',
         'image': 'tech-talk-today.png',
         'plot': 30222,
         'genre': 'Technology',
@@ -300,9 +301,9 @@ def _shows():
 
     # User Error
     shows[30024] = {
-        'feed': 'http://feedpress.me/uevideo',
-        'feed-low': 'http://feedpress.me/usererror',
-        'feed-audio': 'http://feedpress.me/usererror',
+        'feed': FEED_PRESS + 'uevideo',
+        'feed-low': FEED_PRESS + 'usererror',
+        'feed-audio': FEED_PRESS + 'usererror',
         'image': 'usererror.png',
         'plot': 30224,
         'genre': 'Technology',
@@ -311,8 +312,8 @@ def _shows():
 
     # Ask Noah
     shows[30026] = {
-        'feed': 'http://feedpress.me/AskNoahHD',
-        'feed-low': 'http://feedpress.me/AskNoahHD',
+        'feed': FEED_PRESS + 'AskNoahHD',
+        'feed-low': FEED_PRESS + 'AskNoahHD',
         'feed-audio': 'https://asknoah.fireside.fm/rss',
         'image': 'asknoah.png',
         'plot': 30226,

@@ -95,9 +95,9 @@ def _shows():
 
     # TechSnap
     shows[30008] = {
-        'feed': FEED_BURNER + 'techsnaphd?format=xml',
-        'feed-low': FEED_BURNER + 'techsnapmobile?format=xml',
-        'feed-audio': FEED_BURNER + 'techsnapogg?format=xml',
+        'feed': FEED_PRESS + 'techsnapvid',
+        'feed-low': FEED_PRESS + 'techsnapvid',
+        'feed-audio': 'http://techsnap.systems/rss',
         'image': 'techsnap.jpg',
         'plot': 30208,
         'genre': 'Technology',

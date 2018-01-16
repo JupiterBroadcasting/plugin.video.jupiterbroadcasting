@@ -47,10 +47,14 @@ Watch shows from the [Jupiter Broadcasting](http://jupiterbroadcasting.com) netw
 
 ### Environment
 * Requires make, python pip, and virtualenv
+```bash
+$ sudo apt-get install python-pip
+$ pip install virtualenv
+```
 * Clone plugin into Kodi Addons folder, this is sufficient for use/testing
 ```bash
 $ cd ~/.kodi/addons/
-$ git clone git@github.com:RobLoach/plugin.video.jupiterbroadcasting.git
+$ git clone git@github.com:JupiterBroadcasting/plugin.video.jupiterbroadcasting.git
 ```
 * Setup development environment
 ```bash
@@ -76,4 +80,4 @@ $ deactivate
 ## About
 
 * Author: [Rob Loach](http://robloach.net)
-* Source: [GitHub](http://github.com/RobLoach/plugin.video.jupiterbroadcasting/)
+* Source: [GitHub](https://github.com/JupiterBroadcasting/plugin.video.jupiterbroadcasting)

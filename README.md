@@ -4,7 +4,7 @@
 
 Watch shows from the [Jupiter Broadcasting](http://jupiterbroadcasting.com) network in [Kodi](http://kodi.tv).
 
-![Jupiter Broadcasting Kodi Addon Screenshot](resources/media/screenshot.jpg)
+![Jupiter Broadcasting Kodi Addon Screenshot](resources/screenshot-03.jpg)
 
 ## Shows
 

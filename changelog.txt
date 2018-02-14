@@ -1,3 +1,6 @@
+[B]Version 3.6.0 February 14th, 2018[/B]
+- Updated from strings.xml to strings.po
+
 [B]Version 3.5.1 January 28th, 2018[/B]
 - Upgraded to requests over urllib/urllib2
 - Updated audio feeds of active shows

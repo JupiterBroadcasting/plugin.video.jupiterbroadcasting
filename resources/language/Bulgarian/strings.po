@@ -1,7 +1,7 @@
 # XBMC Media Center language file
 # Addon Name: Jupiter Broadcasting
 # Addon id: plugin.video.jupiterbroadcasting
-# Addon version: 3.5.1
+# Addon version: 3.6.0
 # Addon Provider: Jupiter Broadcasting
 msgid ""
 msgstr ""

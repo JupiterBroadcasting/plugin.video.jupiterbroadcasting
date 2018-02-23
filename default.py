@@ -177,7 +177,7 @@ def add_archive(name, info):
     uri += '&name=' + urllib.quote_plus(name) + '&page=' + str(0)
 
     liz = xbmcgui.ListItem(name)
-    liz.SetArt({ 'icon': info['image'], 'thumb': info['image'] })
+    liz.setArt({ 'icon': info['image'], 'thumb': info['image'] })
     liz.setInfo(type='video', infoLabels=info)
     xbmcplugin.addDirectoryItem(
         handle=int(sys.argv[1]),

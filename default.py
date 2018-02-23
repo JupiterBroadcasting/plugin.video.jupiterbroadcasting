@@ -134,7 +134,7 @@ def index(name, url, page):
             # Add the episode link.
             add_link(info['title'], video, pubDate, thumbnail, info)
     except Exception as e:
-        print 'Exception Parsing Feed! Please provide this log to https://github.com/RobLoach/plugin.video.jupiterbroadcasting'
+        xbmc.log('Jupiter Broadcasting Parsing Failure. Provide this log to https://github.com/JupiterBroadcasting/plugin.video.jupiterbroadcasting : %s' % (e), xbmc.LOGERROR)
         raise
 
     xbmcplugin.setContent(int(sys.argv[1]), 'episodes')

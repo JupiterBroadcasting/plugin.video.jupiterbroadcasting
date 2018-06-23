@@ -63,7 +63,7 @@ def _shows():
     shows[30006] = {
         'feed': FEED_BURNER + 'AllJupiterVideos?format=xml',
         'feed-low': FEED_BURNER + 'AllJupiterVideos?format=xml',
-        'feed-audio': FEED_BURNER + '/JupiterBroadcasting?format=xml',
+        'feed-audio': FEED_BURNER + 'JupiterBroadcasting?format=xml',
         'image': 'most-recent.jpg',
         'plot': 30206,
         'genre': 'Technology',

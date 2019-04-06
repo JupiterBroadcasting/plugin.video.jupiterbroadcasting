@@ -98,7 +98,7 @@ def _shows():
         'feed': FEED_PRESS + 'techsnapvid',
         'feed-low': FEED_PRESS + 'techsnapvid',
         'feed-audio': 'http://techsnap.systems/rss',
-        'image': 'techsnap.jpg',
+        'image': 'tech-snap.png',
         'plot': 30208,
         'genre': 'Technology',
         'archived': False
@@ -219,7 +219,7 @@ def _shows():
         'feed': FEED_BURNER + 'coderradiovideo?format=xml',
         'feed-low': FEED_BURNER + 'coderradiomp3?format=xml',
         'feed-audio': 'http://coder.show/rss',
-        'image': 'coder-radio.jpg',
+        'image': 'coder-radio.png',
         'plot': 30217,
         'genre': 'Technology',
         'archived': False
@@ -241,7 +241,7 @@ def _shows():
         'feed': FEED_BURNER + 'linuxunvid?format=xml',
         'feed-low': FEED_BURNER + 'linuxunplugged?format=xml',
         'feed-audio': 'http://linuxunplugged.com/rss',
-        'image': 'linux-unplugged.jpg',
+        'image': 'linux-unplugged.png',
         'plot': 30219,
         'genre': 'Technology',
         'archived': False
@@ -252,7 +252,7 @@ def _shows():
         'feed': FEED_BURNER + 'BsdNowHd?format=xml',
         'feed-low': FEED_BURNER + 'BsdNowMobile?format=xml',
         'feed-audio': FEED_BURNER + 'BsdNowMp3?format=xml',
-        'image': 'bsd-now.jpg',
+        'image': 'bsd-now.png',
         'plot': 30220,
         'genre': 'Technology',
         'archived': False
@@ -304,7 +304,7 @@ def _shows():
         'feed': FEED_PRESS + 'uevideo',
         'feed-low': FEED_PRESS + 'usererror',
         'feed-audio': FEED_PRESS + 'usererror',
-        'image': 'usererror.png',
+        'image': 'user-error.png',
         'plot': 30224,
         'genre': 'Technology',
         'archived': False
@@ -326,7 +326,7 @@ def _shows():
         'feed': 'http://linuxactionnews.com/rss',
         'feed-low': 'http://linuxactionnews.com/rss',
         'feed-audio': 'http://linuxactionnews.com/rss',
-        'image': 'linux-action-news.jpg',
+        'image': 'linux-action-news.png',
         'plot': 30227,
         'genre': 'Technology',
         'archived': False

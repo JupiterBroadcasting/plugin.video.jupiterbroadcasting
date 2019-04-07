@@ -134,7 +134,7 @@ def _shows():
         'image': 'unfilter.jpg',
         'plot': 30216,
         'genre': 'Technology',
-        'archived': False
+        'archived': True
     }
 
     # FauxShow
@@ -277,7 +277,7 @@ def _shows():
         'image': 'tech-talk-today.png',
         'plot': 30222,
         'genre': 'Technology',
-        'archived': False
+        'archived': True
     }
 
     # Women's Tech Radio
@@ -330,6 +330,17 @@ def _shows():
         'plot': 30227,
         'genre': 'Technology',
         'archived': False
+        }
+
+    # Choose Linux
+    shows[30028] = {
+        'feed': 'https://chooselinux.show/rss',
+        'feed-low': 'https://chooselinux.show/rss',
+        'feed-audio': 'https://chooselinux.show/rss',
+        'image': 'choose-linux.png',
+        'plot': 30228,
+        'genre': 'Technology',
+        'archived': False 
         }
 
     return shows

@@ -133,6 +133,10 @@ msgctxt "#30027"
 msgid "Linux Action News"
 msgstr "Linux Action News"
 
+msgctxt "#30028"
+msgid "Choose Linux"
+msgstr "Choose Linux"
+
 msgctxt "#30100"
 msgid "General"
 msgstr "Основни"
@@ -249,6 +253,10 @@ msgctxt "#30223"
 msgid "Women's Tech Radio brings out the voices of women in technology related fields. It explores their journey and collects the resources used along the way. Angela and Paige host this laid-back interview style talk show with tidbits about their life and favorite memories in technology."
 msgstr "Women's Tech Radio извежда на преден план гласа жените. Домакини на това предаване са Angela и Paige."
 
+msgctxt "#30224"
+msgid "Life is a series of mistakes, but that’s what makes it interesting. A show about life, Linux, the universe, and everything in between." 
+msgstr "Life is a series of mistakes, but that’s what makes it interesting. A show about life, Linux, the universe, and everything in between."
+
 msgctxt "#30225"
 msgid "Jupiter Broadcastings' back catalog of your favorite shows."
 msgstr ""
@@ -260,6 +268,10 @@ msgstr "The Ask Noah Show is a weekly radio call in show where we take your tech
 msgctxt "#30227"
 msgid "Weekly Linux news and analysis by Chris and Joe. Linux is everywhere, and runs just about everything. It's the ubiquitous platform that runs on everything, everywhere. Even Windows. Linux Action News is a new show born into this reality, built to cover this landscape."
 msgstr "Weekly Linux news and analysis by Chris and Joe. Linux is everywhere, and runs just about everything. It's the ubiquitous platform that runs on everything, everywhere. Even Windows. Linux Action News is a new show born into this reality, built to cover this landscape."
+
+msgctxt "#30228"
+msgid "Jason joins Joe to share the latest developments on his journey into the Linux and Open Source world."
+msgstr "Jason joins Joe to share the latest developments on his journey into the Linux and Open Source world."
 
 msgctxt "#30300"
 msgid "Older Episodes"

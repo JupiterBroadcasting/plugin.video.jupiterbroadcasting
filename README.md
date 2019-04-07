@@ -11,12 +11,11 @@ Watch shows from the [Jupiter Broadcasting](http://jupiterbroadcasting.com) netw
 * [JBLive.TV](http://jblive.tv)
 * [Ask Noah](http://www.jupiterbroadcasting.com/show/asknoah/)
 * [BSD Now](http://www.jupiterbroadcasting.com/show/bsdnow/)
+* [Choose Linux](https://www.jupiterbroadcasting.com/show/choose/)
 * [Coder Radio](http://www.jupiterbroadcasting.com/show/coderradio/)
 * [Linux Action News](http://linuxactionnews.com)
 * [Linux Unplugged](http://www.jupiterbroadcasting.com/show/linuxun/)
 * [TechSNAP](http://www.jupiterbroadcasting.com/show/techsnap/)
-* [Tech Talk Today](http://www.jupiterbroadcasting.com/show/today/)
-* [Unfilter](http://www.jupiterbroadcasting.com/show/unfilter/)
 * [User Error](http://www.jupiterbroadcasting.com/show/error/)
 
 ## Archive
@@ -33,7 +32,9 @@ Watch shows from the [Jupiter Broadcasting](http://jupiterbroadcasting.com) netw
 * [Plan B](http://www.jupiterbroadcasting.com/show/planb/)
 * [SciByte](http://www.jupiterbroadcasting.com/show/scibyte/)
 * [STOked](http://www.jupiterbroadcasting.com/show/stoked/)
+* [Tech Talk Today](http://www.jupiterbroadcasting.com/show/today/)
 * [TORked](http://www.jupiterbroadcasting.com/show/torked/)
+* [Unfilter](http://www.jupiterbroadcasting.com/show/unfilter/)
 * [Women's Tech Radio](http://www.jupiterbroadcasting.com/show/wtr/)
 
 ## Install

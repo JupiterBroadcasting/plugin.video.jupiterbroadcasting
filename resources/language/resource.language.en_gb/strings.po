@@ -137,7 +137,11 @@ msgctxt "#30027"
 msgid "Linux Action News"
 msgstr ""
 
-#empty strings from id 30028 to 30099
+msgctxt "#30028"
+msgid "Choose Linux"
+msgstr "Choose Linux"
+
+#empty strings from id 30029 to 30099
 
 msgctxt "#30100"
 msgid "General"
@@ -274,8 +278,14 @@ msgctxt "#30227"
 msgid "Weekly Linux news and analysis by Chris and Joe. Linux is everywhere, and runs just about everything. It's the ubiquitous platform that runs on everything, everywhere. Even Windows. Linux Action News is a new show born into this reality, built to cover this landscape."
 msgstr ""
 
+msgctxt "#30228"
+msgid "Jason joins Joe to share the latest developments on his journey into the Linux and Open Source world."
+msgstr "Jason joins Joe to share the latest developments on his journey into the Linux and Open Source world."
+
+
+
 #Settings
-#empty strings from id 30228 to 30299
+#empty strings from id 30229 to 30299
 
 msgctxt "#30300"
 msgid "Older Episodes"

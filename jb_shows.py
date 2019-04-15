@@ -318,7 +318,7 @@ def _shows():
         'image': 'asknoah.png',
         'plot': 30226,
         'genre': 'Technology',
-        'archived': True
+        'archived': False
         }
 
     # Linux Action News

@@ -135,7 +135,7 @@ msgstr "Linux Action News"
 
 msgctxt "#30028"
 msgid "Choose Linux"
-msgstr "Choose Linux"
+msgstr ""
 
 msgctxt "#30100"
 msgid "General"
@@ -234,12 +234,12 @@ msgid "Weekly talk show contemplating the future and present of Bitcoin. With in
 msgstr "Ежеседмично предаване посветено на Bitcoin. Интересни подробности за незапознатите с виртуалните валути, полезна информация за експерти и любопитни дискусии на тема Bitcoin за всеки интересуващ се от виртуални валути."
 
 msgctxt "#30219"
-msgid "Cleans up after the sloppy seconds of the Linux Action Show."
-msgstr "Идеално продължение на Linux Action Show."
+msgid "Your virtual Linux User Group (vLUG) with no limits, and tons of opinion. An open show powered by community LINUX Unplugged takes the best attributes of open collaboration and focuses them into a weekly lifestyle show about Linux."
+msgstr ""
 
 msgctxt "#30220"
-msgid "All things BSD"
-msgstr "За всичко свързано с BSD."
+msgid "Created by three guys who love BSD, we cover the latest news and have an extensive series of tutorials, as well as interviews with various people from all areas of the BSD community. It also serves as a platform for support and questions. We love and advocate FreeBSD, OpenBSD, NetBSD, DragonFlyBSD and TrueOS. Our show aims to be helpful and informative for new users that want to learn about them, but still be entertaining for the people who are already pros."
+msgstr ""
 
 msgctxt "#30221"
 msgid "HowTo Linux will guide you through the amazing world of Linux. From switching to Linux, to building the ultimate home theater, firewall, office file server, and just about anything else."
@@ -251,11 +251,11 @@ msgstr "Ежедневно отразяване на водещи заглави
 
 msgctxt "#30223"
 msgid "Women's Tech Radio brings out the voices of women in technology related fields. It explores their journey and collects the resources used along the way. Angela and Paige host this laid-back interview style talk show with tidbits about their life and favorite memories in technology."
-msgstr "Women's Tech Radio извежда на преден план гласа жените. Домакини на това предаване са Angela и Paige."
+msgstr ""
 
 msgctxt "#30224"
 msgid "Life is a series of mistakes, but that’s what makes it interesting. A show about life, Linux, the universe, and everything in between." 
-msgstr "Life is a series of mistakes, but that’s what makes it interesting. A show about life, Linux, the universe, and everything in between."
+msgstr ""
 
 msgctxt "#30225"
 msgid "Jupiter Broadcastings' back catalog of your favorite shows."
@@ -263,15 +263,15 @@ msgstr ""
 
 msgctxt "#30226"
 msgid "The Ask Noah Show is a weekly radio call in show where we take your tech questions or business in tech questions live on the air."
-msgstr "The Ask Noah Show is a weekly radio call in show where we take your tech questions or business in tech questions live on the air."
+msgstr ""
 
 msgctxt "#30227"
 msgid "Weekly Linux news and analysis by Chris and Joe. Linux is everywhere, and runs just about everything. It's the ubiquitous platform that runs on everything, everywhere. Even Windows. Linux Action News is a new show born into this reality, built to cover this landscape."
-msgstr "Weekly Linux news and analysis by Chris and Joe. Linux is everywhere, and runs just about everything. It's the ubiquitous platform that runs on everything, everywhere. Even Windows. Linux Action News is a new show born into this reality, built to cover this landscape."
+msgstr ""
 
 msgctxt "#30228"
 msgid "Jason joins Joe to share the latest developments on his journey into the Linux and Open Source world."
-msgstr "Jason joins Joe to share the latest developments on his journey into the Linux and Open Source world."
+msgstr ""
 
 msgctxt "#30300"
 msgid "Older Episodes"

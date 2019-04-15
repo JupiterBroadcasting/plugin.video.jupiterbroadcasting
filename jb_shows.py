@@ -318,7 +318,7 @@ def _shows():
         'image': 'asknoah.png',
         'plot': 30226,
         'genre': 'Technology',
-        'archived': False
+        'archived': True
         }
 
     # Linux Action News
@@ -340,7 +340,7 @@ def _shows():
         'image': 'choose-linux.png',
         'plot': 30228,
         'genre': 'Technology',
-        'archived': False 
+        'archived': False
         }
 
     return shows

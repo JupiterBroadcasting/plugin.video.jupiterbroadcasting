@@ -6,3 +6,6 @@ install:
     - pip install -Ur tests/requirements.txt
 script:
     - python -m unittest discover
+
+notifications:
+  email: false

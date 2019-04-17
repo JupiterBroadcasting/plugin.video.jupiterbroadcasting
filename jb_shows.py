@@ -340,7 +340,7 @@ def _shows():
         'image': 'choose-linux.png',
         'plot': 30228,
         'genre': 'Technology',
-        'archived': False 
+        'archived': False
         }
 
     return shows

@@ -137,6 +137,10 @@ msgctxt "#30028"
 msgid "Choose Linux"
 msgstr ""
 
+msgctxt "#30029"
+msgid "Friday Stream"
+msgstr ""
+
 msgctxt "#30100"
 msgid "General"
 msgstr "Основни"
@@ -254,7 +258,7 @@ msgid "Women's Tech Radio brings out the voices of women in technology related f
 msgstr ""
 
 msgctxt "#30224"
-msgid "Life is a series of mistakes, but that’s what makes it interesting. A show about life, Linux, the universe, and everything in between." 
+msgid "Life is a series of mistakes, but that’s what makes it interesting. A show about life, Linux, the universe, and everything in between."
 msgstr ""
 
 msgctxt "#30225"
@@ -271,6 +275,10 @@ msgstr ""
 
 msgctxt "#30228"
 msgid "Jason joins Joe to share the latest developments on his journey into the Linux and Open Source world."
+msgstr ""
+
+msgctxt "#30229"
+msgid "A full crew getting ready for LinuxFest Northwest join us from all over the world."
 msgstr ""
 
 msgctxt "#30300"

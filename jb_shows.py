@@ -112,7 +112,7 @@ def _shows():
         'image': 'scibyte.jpg',
         'plot': 30209,
         'genre': 'Science',
-        'archived': True 
+        'archived': True
     }
 
     # In Depth Look
@@ -257,7 +257,7 @@ def _shows():
         'genre': 'Technology',
         'archived': False
     }
-    
+
     # HowTo Linux
     shows[30021] = {
         'feed': FEED_BURNER + 'HowtoLinuxHd?format=xml',
@@ -339,6 +339,17 @@ def _shows():
         'feed-audio': 'https://chooselinux.show/rss',
         'image': 'choose-linux.png',
         'plot': 30228,
+        'genre': 'Technology',
+        'archived': False
+        }
+
+    # Choose Linux
+    shows[30029] = {
+        'feed': 'https://fridaystream.com/rss',
+        'feed-low': 'https://fridaystream.com/rss',
+        'feed-audio': 'https://fridaystream.com/rss',
+        'image': 'friday-stream.png',
+        'plot': 30229,
         'genre': 'Technology',
         'archived': False
         }
